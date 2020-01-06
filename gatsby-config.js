@@ -5,25 +5,13 @@
  */
 
 module.exports = {
-  plugins: [
-    {
-      resolve: `gatsby-source-mysql`,
-      options: {
-        connectionDetails: {
-          host: 'localhost',
-          user: 'root',
-          password: 'password',
-          database: 'graphql_test_db'
-        },
-        queries: [
-          {
-            statement: 'SELECT * FROM user',
-            idFieldName: '_id',
-            name: 'user'
-          }
-        ]
-      }
-    }
-    // ... other plugins
-  ]
+  siteMetadata: {
+    title: "Sheer Analytics",
+    titleTemplate: "%s · Analyze",
+    description:
+      "Get Reports Easy",
+    url: "https://www.sheeranalyticsandinsights.com", // No trailing slash allowed!
+    // image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
+    // twitterUsername: "@occlumency",
+  }
 }
