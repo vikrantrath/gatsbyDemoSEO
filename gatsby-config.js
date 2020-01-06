@@ -5,5 +5,25 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  plugins: [
+    {
+      resolve: `gatsby-source-mysql`,
+      options: {
+        connectionDetails: {
+          host: 'localhost',
+          user: 'root',
+          password: 'password',
+          database: 'graphql_test_db'
+        },
+        queries: [
+          {
+            statement: 'SELECT * FROM user',
+            idFieldName: '_id',
+            name: 'user'
+          }
+        ]
+      }
+    }
+    // ... other plugins
+  ]
 }

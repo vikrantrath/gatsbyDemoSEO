@@ -1,3 +1,5 @@
-import React from "react"
-
-export default () => <div>Hello world!</div>
+import React from 'react'
+import App from './app'
+export default function index(){
+    return (<App />)
+}
