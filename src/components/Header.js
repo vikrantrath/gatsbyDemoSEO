@@ -1,5 +1,5 @@
 import React from 'react'
-export default function Header() {
+export default function Header(props) {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="#">SH&I</a>
