@@ -1,13 +1,7 @@
 import React from 'react'
 export default function Header() {
-    const styles = {
-        position: 'absolute',
-        width: '100%',
-        bottom: '0px'
-    }
-
     return (
-        <footer className="page-footer bg-info font-small cyan darken-3" style={styles}>
+        <footer className="page-footer bg-info font-small cyan darken-3" >
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 py-5">

@@ -1,8 +1,11 @@
-import React from 'react'
-import SEO from '../components/SEO'
+import React from 'react';
+
+import Layout from '../components/Base/Layout';
+import SEO from '../components/Base/SEO';
+import Home from '../components/Home/Home'
+
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.min.css';
-import Layout from '../components/Layout'
 
 export default function index() {
     return (
@@ -10,6 +13,7 @@ export default function index() {
             <SEO
                 title={'sheer analytics'}
             />
+            <Home />
         </Layout>
     )
 }
