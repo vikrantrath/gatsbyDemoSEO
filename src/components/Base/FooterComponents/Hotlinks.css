@@ -1,0 +1,14 @@
+.cool-link {
+    text-decoration: none;
+  }
+  .cool-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 1s ease;
+  }
+  .cool-link:hover::after {
+    width: 50%;
+  }
