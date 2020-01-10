@@ -1,9 +1,11 @@
 import React from 'react'
+import GoogleTranslate from './GoogleTranslate'
 import Logo from '../../assets/sai_logo.png'
 export default function Header(props) {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
             <div class="col-md-2">
+                <GoogleTranslate />
                 <img src={Logo} height="60px" href="#" className="navbar-brand" />
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

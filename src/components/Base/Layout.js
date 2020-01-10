@@ -1,16 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Header from './header';
 import Footer from './footer';
-
 function Layout({ children }) {
     return (
         <body>
             {/* Navigation */}
-            <Header/>
-
+            <Header />
             {children}
-
             {/* Footer */}
             <Footer />
         </body>
