@@ -1,9 +1,9 @@
 import React from 'react'
 
-import ContactInfo from './FooterComponents/ContactInfo'
-import NewsLetter from './FooterComponents/NewsLetter'
-import ContactForm from './FooterComponents/ContactForm'
-import Hotlinks from './FooterComponents/Hotlinks'
+import ContactInfo from '../Base/FooterComponents/ContactInfo'
+import NewsLetter from '../Base/FooterComponents/NewsLetter'
+import ContactForm from '../Base/FooterComponents/ContactForm'
+import Hotlinks from '../Base/FooterComponents/Hotlinks'
 
 
 export default function Header() {

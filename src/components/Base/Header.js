@@ -1,5 +1,5 @@
 import React from 'react'
-import GoogleTranslate from './GoogleTranslate'
+import GoogleTranslate from '../Base/GoogleTranslate'
 import Logo from '../../assets/sai_logo.png'
 export default function Header(props) {
     return (
