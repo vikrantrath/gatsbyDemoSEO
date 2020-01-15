@@ -1,4 +1,5 @@
 import React from 'react';
+import SectionHeader from '../../Shared/SectionHeader'
 
 import microscope from '../../../assets/microscope.png'
 import globe from '../../../assets/globe.png'
@@ -8,44 +9,27 @@ import phone from '../../../assets/phone.png'
 import report from '../../../assets/report.png'
 
 export default function () {
+    const items = [
+        { imageSrc: microscope, primaryText: "100+", secondaryText: "Years Of Cumulative Market Research Experience" },
+        { imageSrc: globe, primaryText: "1000+", secondaryText: "Cross Country Market Reports" },
+        { imageSrc: client1, primaryText: "500", secondaryText: "Clients Include Fortune 500 Companies" },
+        { imageSrc: phone, primaryText: "200+", secondaryText: "Hours Of Free Post Sale Services" },
+        { imageSrc: report, primaryText: "1000K +", secondaryText: "Confirmed Data Points" },
+        { imageSrc: ontime, primaryText: "300+", secondaryText: "Ontime Delivery" }
+    ]
     return (
         <div className="container-fluid">
+            <SectionHeader headingText={"Why Choose Us"} />
             <div className="row">
-                <hr className="ma-auto" style={{ width: '65%' }} />
-                <h1 className="text-center text-uppercase font-weight-light col-md-12 mb-3">Why Choose Us</h1>
+                {items.map((item, i) => {
+                    return (
+                        < div class="text-center col-md-2 col-sm-6" >
+                            <img src={item.imageSrc} class="rounded mb-3" alt="..." />
+                            <div className="font-weight-bold">{item.primaryText}</div>
+                            <div className="font-weight-normal p-2">{item.secondaryText}</div>
+                        </div>)
+                })}
             </div>
-            <div className="row">
-                <div class="text-center col-md-2 col-sm-6">
-                    <img src={microscope} class="rounded mb-3" alt="..." />
-                    <div className="font-weight-bold">100+</div>
-                    <div className="font-weight-normal p-2">Years Of Cumulative Market Research Experience</div>
-                </div>
-                <div class="text-center col-md-2 col-sm-6">
-                    <img src={globe} class="rounded mb-3" alt="..." />
-                    <div className="font-weight-bold">1000+</div>
-                    <div className="font-weight-normal p-2">Cross Country Market Reports</div>
-                </div>
-                <div class="text-center col-md-2 col-sm-6">
-                    <img src={client1} class="rounded mb-3" alt="..." />
-                    <div className="font-weight-bold">500</div>
-                    <div className="font-weight-normal p-2">Clients Include Fortune 500 Companies</div>
-                </div>
-                <div class="text-center col-md-2 col-sm-6">
-                    <img src={phone} class="rounded mb-3" alt="..." />
-                    <div className="font-weight-bold">200+</div>
-                    <div className="font-weight-normal p-2">Hours Of Free Post Sale Services</div>
-                </div>
-                <div class="text-center col-md-2 col-sm-6">
-                    <img src={report} class="rounded mb-3" alt="..." />
-                    <div className="font-weight-bold">1000K +</div>
-                    <div className="font-weight-normal p-2">Confirmed Data Points</div>
-                </div>
-                <div class="text-center col-md-2 col-sm-6">
-                    <img src={ontime} class="rounded mb-3" alt="..." />
-                    <div className="font-weight-bold">300+</div>
-                    <div className="font-weight-normal p-2">Ontime Delivery</div>
-                </div>
-            </div>
-        </div>
+        </div >
     )
 }
