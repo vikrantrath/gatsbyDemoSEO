@@ -20,6 +20,8 @@
     "gatsby-plugin-react-helmet": "^3.1.18",
     "gatsby-source-filesystem": "^2.1.43",
     "gatsby-source-mysql": "^2.2.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1"
