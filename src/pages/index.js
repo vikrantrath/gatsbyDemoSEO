@@ -4,8 +4,7 @@ import Layout from '../components/Base/Layout';
 import SEO from '../components/Base/SEO';
 import Home from '../components/Home/Home'
 
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
+import '../styles/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 
 export default function index() {
