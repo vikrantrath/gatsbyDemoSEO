@@ -5,6 +5,7 @@ import Solutions from './HomeComponents/Solutions'
 import Industry from './HomeComponents/Industry'
 import LatestPublication from './HomeComponents/LatestPublication'
 import Benefits from './HomeComponents/Benefits'
+import Clients from './HomeComponents/Clients'
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <Industry />
             <LatestPublication />
             <Benefits />
+            <Clients />
             <WhyChooseUs />
         </section>
     )

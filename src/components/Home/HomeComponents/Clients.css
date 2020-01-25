@@ -1,0 +1,10 @@
+.clientsContainer{
+    background-color: aliceblue;
+}
+.clientLogo{
+    height: 5em;
+}
+
+.clientLogo img{
+    padding: 1.5em;
+}
