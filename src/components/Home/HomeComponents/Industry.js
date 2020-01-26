@@ -7,7 +7,7 @@ export default function Industry() {
         {
             name: "Consumer Oriented Sector",
             icon: "fa fa-users",
-            description: "Consumer Oriented Sector From the latest market research reports on the consumer-oriented sector, you can get a deeper insight of the consumer goods industry and know about its various market segmentations in details.",
+            description: "From the latest market research reports on the consumer-oriented sector, you can get a deeper insight of the consumer goods industry and know about its various market segmentations in details.",
             items: ["Food", "Health & Beauty", "Alcoholic Beverages", "Food Ingredients", "Pet Care", "Baby Care", "Footwear", "Packaging", "Travel and Tourism", "Home Care", "Other Consumer Goods"]
         },
         {
@@ -42,29 +42,33 @@ export default function Industry() {
         }
     ];
     return (
-        <div className="container-fluid">
+        <div className="container-fluid p-4">
             <SectionHeader headingText={"Industry Expertise"} />
             <div className="row">
                 {sectorList.map(item => {
                     return (
                         < div class="text-center col-md-6 col-sm-12" >
-                            <div className="industry-icon">
-                                <i className={item.icon} aria-hidden="true"></i>
+                            <div className="col-md-12">
+                                <div className="industry-icon">
+                                    <i className={item.icon} aria-hidden="true"></i>
+                                </div>
                             </div>
-                            <h5>{item.name}</h5>
-                            <div className="font-weight-lighter text-left p-2">{item.description}</div>
-                            <ul className="row list-unstyled">
-                                {item.items.map(e => {
-                                    return (
-                                        < li class="col-md-4 col-sm-12 text-left p-0" >
-                                            <div className="industry-icon pl-2 ">
-                                                <i className="fa fa-chevron-right ml-2" aria-hidden="true"></i>
-                                            </div>
-                                            <span className="font-weight-light text-left p-1" style={{ fontSize: '0.84em' }}>{e}</span>
-                                        </ li>
-                                    );
-                                })}
-                            </ul>
+                            <div className="col-md-12"><h5>{item.name}</h5></div>
+                            <div className="font-weight-lighter col-md-12 text-left p-2 mb-4" style={{ fontSize: '0.93em' }}>{item.description}</div>
+                            <div className="container">
+                                <ul className="row list-unstyled">
+                                    {item.items.map(e => {
+                                        return (
+                                            < li class="col-md-4 col-sm-12 text-left p-0" >
+                                                <div className="industry-icon pl-2 ">
+                                                    <i className="fa fa-chevron-right ml-1" aria-hidden="true"></i>
+                                                </div>
+                                                <span className="font-weight-light text-left pl-1" style={{ fontSize: '0.84em' }}>{e}</span>
+                                            </ li>
+                                        );
+                                    })}
+                                </ul>
+                            </div>
                             <button type="button" class="float-left btn btn-outline-primary mt-2 mb-2">Submit</button>
                         </ div>
                     )
