@@ -237,39 +237,54 @@ export default function Header(props) {
 
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-            <div class="col-md-2">
-                <GoogleTranslate />
-                <img src={Logo} height="60px" href="#" className="navbar-brand" />
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+        <>
+            <div className="row" style={{ backgroundColor: "#0f0f7a" }}>
+                <div className="col-md-3 text-center text-light align-content-center pt-2"><GoogleTranslate /></div>
+                <div className="col-md-6 text-center text-light pt-2"><i class="fa fa-phone" aria-hidden="true"></i>+91-33-4600-9199 (India),<i class="fa fa-phone" aria-hidden="true"></i> +1-414-240-5010 (U.S.)</div>
+                <div className="col-md-3 text-center text-light pt-2">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">Home</li>
+                        <li class="list-inline-item border-left pl-1">News</li>
+                        <li class="list-inline-item border-left pl-1">Press</li>
+                        <li class="list-inline-item border-left pl-1">Blog</li>
+                        <li class="list-inline-item border-left pl-1">Query</li>
+                        <li class="list-inline-item border-left pl-1">Login</li>
+                    </ul>
+                </div>
             </div>
-            <div className="collapse navbar-collapse col-md-8 pt-4" id="navbarNav">
-                <ul className="navbar-nav d-flex justify-content-between">
-                    {navItems.map(item => {
-                        if (item.isDropDown) {
-                            return (
-                                <DropdownItem item={item} />
-                            )
-                        } else {
-                            return (
-                                <li className="nav-item">
-                                    <a className="nav-link" href={item.link}>{item.name}</a>
-                                </li>
-                            );
-                        }
-                    })}
-                    <li className="nav-item ml-2">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" />
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i>
-                                </span>
-                            </div>
-                        </div></li>
-                </ul>
-            </div>
-        </nav >
+            <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+                <div class="col-md-2">
+                    <img src={Logo} height="60px" href="#" className="navbar-brand" />
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div className="collapse navbar-collapse col-md-8 pt-4" id="navbarNav">
+                    <ul className="navbar-nav d-flex justify-content-between">
+                        {navItems.map(item => {
+                            if (item.isDropDown) {
+                                return (
+                                    <DropdownItem item={item} />
+                                )
+                            } else {
+                                return (
+                                    <li className="nav-item">
+                                        <a className="nav-link" href={item.link}>{item.name}</a>
+                                    </li>
+                                );
+                            }
+                        })}
+                        <li className="nav-item ml-2">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" />
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div></li>
+                    </ul>
+                </div>
+            </nav >
+        </>
     )
 }

@@ -8,7 +8,7 @@ import Hotlinks from '../Base/FooterComponents/Hotlinks'
 
 export default function Header() {
     return (
-        <footer className="page-footer bg-info font-small" >
+        <footer className="page-footer font-small" style={{ backgroundColor: "#0f0f7a" }}>
             <div className="container">
                 <div className="row justify-content-between">
                     <div className="col-md-3">
