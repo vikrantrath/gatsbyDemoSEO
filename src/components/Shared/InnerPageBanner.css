@@ -1,0 +1,12 @@
+.banner-background {
+  background-image: url("../../assets//aboutBackground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 4em;   
+}
+.opacity {
+  background: rgba(0, 0, 20, 0.77);
+  text-align: center;
+  padding: 5em 0 3px 0;
+}

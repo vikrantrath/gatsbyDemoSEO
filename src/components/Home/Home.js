@@ -8,6 +8,7 @@ import Benefits from './HomeComponents/Benefits'
 import Clients from './HomeComponents/Clients'
 
 export default function Home() {
+    
     return (
         <section id="Home">
             <FeaturedSection />
