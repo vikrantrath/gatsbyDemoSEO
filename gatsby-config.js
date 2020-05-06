@@ -36,28 +36,34 @@ module.exports = {
             name: "latestreports",
           },
           {
-            statement:
-              "select * from ind_cat_sectors where status=1",
+            statement: "select * from ind_cat_sectors where status=1",
             idFieldName: "id",
             name: "industrycategorysector",
           },
           {
-            statement:
-              "select * from industry_cats where status=1",
+            statement: "select * from industry_cats where status=1",
             idFieldName: "id",
             name: "industrycategory",
           },
           {
-            statement:
-              "select * from abouts",
+            statement: "select * from abouts",
             idFieldName: "id",
             name: "abouts",
           },
           {
-            statement:
-              "select * from contacts",
+            statement: "select * from contacts",
             idFieldName: "id",
             name: "contacts",
+          },
+          {
+            statement: "select * from news where status=1 order by id desc",
+            idFieldName: "id",
+            name: "news",
+          },
+          {
+            statement: "select * from presses where status=1 order by id desc",
+            idFieldName: "id",
+            name: "presses",
           },
         ],
       },

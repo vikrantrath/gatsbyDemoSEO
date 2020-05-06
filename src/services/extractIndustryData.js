@@ -83,6 +83,7 @@ export default function() {
           )
           .map(sector => {
             return {
+              id: sector.node.id.replace("mysql__Industrycategorysector__", ""),
               sectorName: sector.node.sector_name,
               slug: sector.node.slug,
             }

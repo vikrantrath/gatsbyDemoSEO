@@ -72,7 +72,7 @@ export default function LatestPublication() {
           {pressRelease.map(e => {
             return (
               <div className="font-weight-lighter text-left p-2 border">
-                <a href={`press?${e.link}`}>{e.title}</a>
+                <a href={`press/${e.link}`}>{e.title}</a>
               </div>
             )
           })}

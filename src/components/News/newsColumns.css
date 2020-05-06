@@ -1,0 +1,9 @@
+.news-box,
+.news-box2 {
+  background: white;
+  border: 1px solid #d8c7c7;
+  padding: 0;
+  padding-bottom: 1em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}

@@ -1,0 +1,6 @@
+.pressArticle img {
+  width: 100% !important;
+}
+.pressArticle >div> p {
+  text-align: justify;
+}

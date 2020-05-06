@@ -21,8 +21,6 @@ export default function() {
     }
   `)
 
-  console.log(data)
-
   return data.allMysqlContacts.edges.map(e => {
     return {
       id: e.node.id,
