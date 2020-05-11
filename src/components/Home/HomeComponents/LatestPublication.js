@@ -1,6 +1,6 @@
 import React from "react"
 import SectionHeader from "../../Shared/SectionHeader"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 export default function LatestPublication() {
   const data = useStaticQuery(graphql`
@@ -55,11 +55,11 @@ export default function LatestPublication() {
           {mrReports.map(e => {
             return (
               <div className="font-weight-lighter text-left p-2 border">
-                <a
-                  href={`/market-report-research/${e.link}-${e.report_type}${e.report_sub_type}`}
+                <Link
+                  to={`/market-report-research/${e.link}-${e.report_type}${e.report_sub_type}`}
                 >
                   {e.title}
-                </a>
+                </Link>
               </div>
             )
           })}
@@ -72,7 +72,7 @@ export default function LatestPublication() {
           {pressRelease.map(e => {
             return (
               <div className="font-weight-lighter text-left p-2 border">
-                <a href={`press/${e.link}`}>{e.title}</a>
+                <Link to={`press/${e.link}`}>{e.title}</Link>
               </div>
             )
           })}

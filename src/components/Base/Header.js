@@ -203,7 +203,9 @@ export default function Header(props) {
       </div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
         <div class="col-md-2">
-          <img src={Logo} height="60px" href="#" className="navbar-brand" />
+          <a href="/">
+            <img src={Logo} height="60px" className="navbar-brand" />
+          </a>
           <button
             className="navbar-toggler"
             type="button"

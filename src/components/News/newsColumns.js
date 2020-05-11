@@ -1,10 +1,11 @@
 import React from "react"
 import "./newsColumns.css"
+import { Link } from "gatsby"
 
 export default function({ image, slug, alt_text, title }) {
   return (
     <div className="col-md-3 offset-md-1 news-box">
-      <a className="text-decoration-none" href={`/news/${slug}`}>
+      <Link className="text-decoration-none" to={`/news/${slug}`}>
         <div className="col-md-12 p-0" height="13em">
           <img src={image} alt={alt_text} width="100%" height="100%" />
         </div>
@@ -22,7 +23,7 @@ export default function({ image, slug, alt_text, title }) {
             <u className="text-dark">READ THE STORY</u>
           </center>
         </div>
-      </a>
+      </Link>
       <div class="col-md-12 p-0 mt-1">
         <center>
           <h4>Share:</h4>

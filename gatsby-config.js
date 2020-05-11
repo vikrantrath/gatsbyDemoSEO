@@ -65,6 +65,30 @@ module.exports = {
             idFieldName: "id",
             name: "presses",
           },
+          {
+            statement:
+              "select * from syn_lpr_reports where status=1 order by id desc",
+            idFieldName: "id",
+            name: "syndicatereport",
+          },
+          {
+            statement:
+              "select * from pass_lpr_reports where status=1 order by id desc",
+            idFieldName: "id",
+            name: "passLprReport",
+          },
+          {
+            statement:
+              "select * from pass2_reports where status=1 order by id desc",
+            idFieldName: "id",
+            name: "pass2Report",
+          },
+          {
+            statement:
+              "select * from upcomings where status=1 order by id desc",
+            idFieldName: "id",
+            name: "upcomings",
+          },
         ],
       },
     },

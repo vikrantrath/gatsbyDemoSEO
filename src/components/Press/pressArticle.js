@@ -6,7 +6,7 @@ import Layout from "../Base/Layout"
 import SEO from "../Base/SEO"
 import InnerPageBanner from "../Shared/InnerPageBanner"
 
-import LeftRail from "./PressArticleComponents/leftRail"
+import Article from "../Shared/Article"
 import RightRail from "./PressArticleComponents/rightRail"
 
 import "../../styles/bootstrap.min.css"
@@ -19,13 +19,11 @@ export default function({ slug }) {
 
   function getArticleData() {
     if (item) {
-      console.log("page * :", item)
       return allPressData.find(e => e.slug == item)
     }
     return null
   }
   const data = getArticleData()
-  console.log(data)
   return (
     <Layout>
       <SEO title={"sheer analytics"} />
@@ -37,7 +35,7 @@ export default function({ slug }) {
         <div className="container">
           <div className="row">
             <div className="col-md-9 pressArticle">
-              <LeftRail pressItem={data} />
+              <Article pressItem={data} />
             </div>
             <div className="col-md-3">
               <RightRail pressItem={data} />

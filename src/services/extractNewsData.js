@@ -18,6 +18,7 @@ export default function() {
             slug
             views
             status
+            created_at
           }
         }
       }
@@ -38,6 +39,7 @@ export default function() {
       month: e.node.month,
       views: e.node.views,
       status: e.node.status,
+      created_at: e.node.created_at,
     }
   })
 }

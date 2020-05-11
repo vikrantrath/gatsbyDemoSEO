@@ -1,14 +1,15 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 
 export default function({ item }) {
   return (
     <div className="col-md-12 border mb-4 p-3">
-      <a
+      <Link
         className="text-decoration-none text-body h5 mb-2 font-weight-bold"
-        href={`/press/${item.slug}`}
+        to={`/press/${item.slug}`}
       >
         {item.title}
-      </a>
+      </Link>
       <p className="text-muted font-weight-light mt-2">
         Published : {new Date(item.created_at).toDateString()}
       </p>
@@ -20,12 +21,12 @@ export default function({ item }) {
             .concat(item.body.length > 1027 ? "..." : ""),
         }}
       ></div>
-      <a
+      <Link
         className="text-decoration-none btn btn-primary text-uppercase"
-        href={`/press/${item.slug}`}
+        to={`/press/${item.slug}`}
       >
         Read More
-      </a>
+      </Link>
     </div>
   )
 }

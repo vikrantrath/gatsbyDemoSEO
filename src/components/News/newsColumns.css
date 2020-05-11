@@ -7,3 +7,7 @@
   margin-top: 2em;
   margin-bottom: 1em;
 }
+
+.article img {
+  width: 100% !important;
+}
