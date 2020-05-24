@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import GoogleTranslate from "../Base/GoogleTranslate"
 import Logo from "../../assets/sai_logo.png"
 import DropdownItem from "../Shared/DropdownItems"
-import extractIndustryData from "../../services/extractIndustryData"
+import { extractIndustryData,extractRegionData } from "../../services"
 export default function Header(props) {
   const industryData = extractIndustryData().map(e => {
     return {
@@ -18,6 +18,20 @@ export default function Header(props) {
     }
   })
 
+  const regionData = extractRegionData().map(e => {
+    return {
+      sectionName: e.cat_name,
+      sectionLink: `/report/reg/${e.slug}`,
+      sectionItems: e.sectorList.map(ele => {
+        return {
+          name: ele.sector_name,
+          link: `/report/reg/sect/${ele.slug}`,
+        }
+      }),
+    }
+  })
+
+
   const navItems = [
     {
       name: "Industry Expertise",
@@ -30,108 +44,109 @@ export default function Header(props) {
       name: "Regions",
       link: "#",
       isDropDown: true,
-      dropdownItems: [
-        {
-          sectionName: "Asia Pacific",
-          sectionItems: [
-            { name: "China", link: "#" },
-            { name: "India", link: "#" },
-            { name: "Indonesia", link: "#" },
-            { name: "Pakistan", link: "#" },
-            { name: "Japan", link: "#" },
-            { name: "Philippines", link: "#" },
-            { name: "Vietnam", link: "#" },
-            { name: "Thailand", link: "#" },
-            { name: "South Korea", link: "#" },
-            { name: "Malaysia", link: "#" },
-            { name: "Taiwan", link: "#" },
-            { name: "Australia", link: "#" },
-            { name: "Hong Kong", link: "#" },
-            { name: "Singapore", link: "#" },
-            { name: "New Zealand", link: "#" },
-            { name: "Sri Lanka", link: "#" },
-          ],
-        },
-        {
-          sectionName: "CEE",
-          sectionItems: [
-            { name: "Russia", link: "#" },
-            { name: "Turkey", link: "#" },
-            { name: "Ukraine", link: "#" },
-            { name: "Poland", link: "#" },
-            { name: "Romania", link: "#" },
-            { name: "Czech Republic", link: "#" },
-            { name: "Hungary", link: "#" },
-            { name: "Bulgaria", link: "#" },
-            { name: "Baltic States", link: "#" },
-            { name: "Slovakia", link: "#" },
-            { name: "Croatia", link: "#" },
-            { name: "Slovenia", link: "#" },
-            { name: "Latvia", link: "#" },
-            { name: "Lithuania", link: "#" },
-            { name: "Estonia", link: "#" },
-          ],
-        },
-        {
-          sectionName: "Latin America",
-          sectionItems: [
-            { name: "Uruguay", link: "#" },
-            { name: "Venezuela", link: "#" },
-            { name: "Chile", link: "#" },
-            { name: "Peru", link: "#" },
-            { name: "Colombia", link: "#" },
-            { name: "Argentina", link: "#" },
-            { name: "Brazil", link: "#" },
-            { name: "Mexico", link: "#" },
-          ],
-        },
-        {
-          sectionName: "Middle East & Africa",
-          sectionItems: [
-            { name: "Nigeria", link: "#" },
-            { name: "Egypt", link: "#" },
-            { name: "South Africa", link: "#" },
-            { name: "Morocco", link: "#" },
-            { name: "Saudi Arabia", link: "#" },
-            { name: "Israel", link: "#" },
-            { name: "UAE", link: "#" },
-            { name: "Ghana", link: "#" },
-            { name: "Kenya", link: "#" },
-            { name: "Iran", link: "#" },
-            { name: "Algeria", link: "#" },
-          ],
-        },
-        {
-          sectionName: "North America ",
-          sectionItems: [
-            { name: "US", link: "#" },
-            { name: "Canada", link: "#" },
-          ],
-        },
-        {
-          sectionName: "Western Europe ",
-          sectionItems: [
-            { name: "Germany", link: "#" },
-            { name: "France", link: "#" },
-            { name: "UK", link: "#" },
-            { name: "Italy", link: "#" },
-            { name: "Spain", link: "#" },
-            { name: "Netherlands", link: "#" },
-            { name: "Greece", link: "#" },
-            { name: "Portugal", link: "#" },
-            { name: "Belgium", link: "#" },
-            { name: "Sweden", link: "#" },
-            { name: "Austria", link: "#" },
-            { name: "Switzerland", link: "#" },
-            { name: "Finland", link: "#" },
-            { name: "Norway", link: "#" },
-          ],
-        },
-        {
-          sectionName: "Global",
-          sectionItems: [{ name: "Global", link: "#" }],
-        },
-      ],
+      dropdownItems: regionData,
+      // dropdownItems: [
+      //   {
+      //     sectionName: "Asia Pacific",
+      //     sectionItems: [
+      //       { name: "China", link: "#" },
+      //       { name: "India", link: "#" },
+      //       { name: "Indonesia", link: "#" },
+      //       { name: "Pakistan", link: "#" },
+      //       { name: "Japan", link: "#" },
+      //       { name: "Philippines", link: "#" },
+      //       { name: "Vietnam", link: "#" },
+      //       { name: "Thailand", link: "#" },
+      //       { name: "South Korea", link: "#" },
+      //       { name: "Malaysia", link: "#" },
+      //       { name: "Taiwan", link: "#" },
+      //       { name: "Australia", link: "#" },
+      //       { name: "Hong Kong", link: "#" },
+      //       { name: "Singapore", link: "#" },
+      //       { name: "New Zealand", link: "#" },
+      //       { name: "Sri Lanka", link: "#" },
+      //     ],
+      //   },
+      //   {
+      //     sectionName: "CEE",
+      //     sectionItems: [
+      //       { name: "Russia", link: "#" },
+      //       { name: "Turkey", link: "#" },
+      //       { name: "Ukraine", link: "#" },
+      //       { name: "Poland", link: "#" },
+      //       { name: "Romania", link: "#" },
+      //       { name: "Czech Republic", link: "#" },
+      //       { name: "Hungary", link: "#" },
+      //       { name: "Bulgaria", link: "#" },
+      //       { name: "Baltic States", link: "#" },
+      //       { name: "Slovakia", link: "#" },
+      //       { name: "Croatia", link: "#" },
+      //       { name: "Slovenia", link: "#" },
+      //       { name: "Latvia", link: "#" },
+      //       { name: "Lithuania", link: "#" },
+      //       { name: "Estonia", link: "#" },
+      //     ],
+      //   },
+      //   {
+      //     sectionName: "Latin America",
+      //     sectionItems: [
+      //       { name: "Uruguay", link: "#" },
+      //       { name: "Venezuela", link: "#" },
+      //       { name: "Chile", link: "#" },
+      //       { name: "Peru", link: "#" },
+      //       { name: "Colombia", link: "#" },
+      //       { name: "Argentina", link: "#" },
+      //       { name: "Brazil", link: "#" },
+      //       { name: "Mexico", link: "#" },
+      //     ],
+      //   },
+      //   {
+      //     sectionName: "Middle East & Africa",
+      //     sectionItems: [
+      //       { name: "Nigeria", link: "#" },
+      //       { name: "Egypt", link: "#" },
+      //       { name: "South Africa", link: "#" },
+      //       { name: "Morocco", link: "#" },
+      //       { name: "Saudi Arabia", link: "#" },
+      //       { name: "Israel", link: "#" },
+      //       { name: "UAE", link: "#" },
+      //       { name: "Ghana", link: "#" },
+      //       { name: "Kenya", link: "#" },
+      //       { name: "Iran", link: "#" },
+      //       { name: "Algeria", link: "#" },
+      //     ],
+      //   },
+      //   {
+      //     sectionName: "North America ",
+      //     sectionItems: [
+      //       { name: "US", link: "#" },
+      //       { name: "Canada", link: "#" },
+      //     ],
+      //   },
+      //   {
+      //     sectionName: "Western Europe ",
+      //     sectionItems: [
+      //       { name: "Germany", link: "#" },
+      //       { name: "France", link: "#" },
+      //       { name: "UK", link: "#" },
+      //       { name: "Italy", link: "#" },
+      //       { name: "Spain", link: "#" },
+      //       { name: "Netherlands", link: "#" },
+      //       { name: "Greece", link: "#" },
+      //       { name: "Portugal", link: "#" },
+      //       { name: "Belgium", link: "#" },
+      //       { name: "Sweden", link: "#" },
+      //       { name: "Austria", link: "#" },
+      //       { name: "Switzerland", link: "#" },
+      //       { name: "Finland", link: "#" },
+      //       { name: "Norway", link: "#" },
+      //     ],
+      //   },
+      //   {
+      //     sectionName: "Global",
+      //     sectionItems: [{ name: "Global", link: "#" }],
+      //   },
+      // ],
       columns: 12,
     },
     {

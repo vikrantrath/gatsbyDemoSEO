@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Router } from "@reach/router"
+import { Router, Match } from "@reach/router"
 
 import Home from "../page/home"
 import Press from "../page/press"
@@ -18,6 +18,9 @@ import SyndicateReport from "../page/syndicate-reports"
 import "../styles/bootstrap.min.css"
 import "font-awesome/css/font-awesome.min.css"
 import Layout from "../components/Base/Layout"
+import Report from "../page/report"
+import CategorySectorReports from "../components/Report/categorySectorReports"
+import CategoryReport from "../components/Report/categoryReport"
 
 export default function index(props) {
   function ErrorDisplay() {
@@ -32,11 +35,12 @@ export default function index(props) {
         <About path="/about-us" />
         <ConsultingSolutions path="/consulting-solutions" />
         <Contact path="/contact-us" />
-        <DataMarketMonitoring path="/data-market-Monitoring" />
+        <DataMarketMonitoring path="/data-market-monitoring" />
         <NewsAndResources path="/news-and-resources" />
         <PassportReport path="/passport-reports" />
         <PressRelease path="/press-release" />
         <SyndicateReport path="/syndicate-reports" />
+        <Report path="/report/*" />
         <ErrorDisplay default />
       </Router>
     </Layout>

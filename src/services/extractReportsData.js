@@ -16,7 +16,7 @@ export function getAllReportsByType(
   data.push(...solutionData)
   data.push(...solutionData2)
   const upcomingSyndicateData = upcomingsData.filter(
-    e => e.report_type == solutionType
+    e => solutionType.includes(e.report_type)
   )
   data.push(...upcomingSyndicateData)
   return data

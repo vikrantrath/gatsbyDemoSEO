@@ -20,7 +20,7 @@ export default function() {
   const data = getAllReportsByType(
     extractSyndicateReport(),
     extractUpcomingsReport(),
-    constants().solution_type.Syndicate_Report
+    [constants().solution_type.Syndicate_Report]
   )
   return (
     <>

@@ -22,7 +22,7 @@ export default function({ tableData }) {
     }
   }
 
-  return (
+  return tableData.length > 0 ? (
     <table className="table table-bordered table-hover">
       <thead className="thead-dark">
         <tr>
@@ -99,5 +99,7 @@ export default function({ tableData }) {
         })}
       </tbody>
     </table>
+  ) : (
+    <div className="h4 text-center">No reports available </div>
   )
 }

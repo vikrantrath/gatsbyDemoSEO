@@ -24,7 +24,6 @@ export default function({ slug }) {
     return null
   }
   const data = getArticleData()
-  console.log(data)
   return (
     <>
       <SEO title={"sheer analytics"} />

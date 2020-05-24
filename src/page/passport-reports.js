@@ -21,7 +21,7 @@ export default function() {
   const data = getAllReportsByType(
     extractPassport2Data(),
     extractUpcomingsReport(),
-    constants().solution_type.Syndicate_Report,
+    [constants().solution_type.Passport_Report_1,constants().solution_type.Passport_Report_2],
     extractPassport1Data()
   )
   return (

@@ -7,8 +7,8 @@ export default function({ linkList, headingText }) {
       <ul className="list-unstyled">
         {linkList.map(e => {
           return (
-            <li className="mb-4">
-              <a className="text-decoration-none" href={e.href}>
+            <li className="mb-1">
+              <a className="text-decoration-none text-dark" href={e.href}>
                 {e.name}
               </a>
             </li>

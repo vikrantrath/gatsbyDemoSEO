@@ -89,6 +89,16 @@ module.exports = {
             idFieldName: "id",
             name: "upcomings",
           },
+          {
+            statement: "select * from region_cats where status=1",
+            idFieldName: "id",
+            name: "region",
+          },
+          {
+            statement: "select * from reg_cat_sectors where status=1",
+            idFieldName: "id",
+            name: "regionSector",
+          },
         ],
       },
     },

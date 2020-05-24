@@ -1,7 +1,6 @@
 import React from "react"
 
 export default function({ options }) {
-  console.log(options)
   return (
     <div className="col-md-12 p-3 list-inline justify-content-between">
       {options.map(e => {
