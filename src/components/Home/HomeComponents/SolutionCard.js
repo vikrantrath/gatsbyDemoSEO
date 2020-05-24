@@ -32,18 +32,20 @@ export default function SolutionCard({ item }) {
           </p>
         </div>
       ) : (
-        <div
-          className="mt-4 text-dark"
-          style={{
-            borderBottom: `0.7em solid ${item.borderColor}`,
-            height: "100%",
-            width: "100%",
-          }}
-        >
-          <img src={item.itemSrc} height="93px" width="93px" />
-          <h6 className="font-weight-normal p-2">{item.title}</h6>
-        </div>
-      )}
+          <div
+            className="text-dark solcat"
+            style={{
+              borderBottom: `0.7em solid ${item.borderColor}`,
+              height: "100%",
+              width: "100%",
+            }}
+          >
+            <div className="mt-4">
+              <img src={item.itemSrc} height="93px" width="93px" />
+              <h6 className="font-weight-normal p-2">{item.title}</h6>
+            </div>
+          </div>
+        )}
     </Link>
   )
 }
