@@ -1,6 +1,7 @@
 import React from "react"
 import SectionHeader from "../../Shared/SectionHeader"
 import extractIndustryData from "../../../services/extractIndustryData"
+import { Link } from "gatsby"
 import "./Industry.css"
 
 export default function Industry() {
@@ -18,12 +19,12 @@ export default function Industry() {
                 </div>
               </div>
               <div className="col-md-12">
-                <a
+                <Link
                   className="text-decoration-none text-dark"
-                  href={`/report/${item.slug}`}
+                  to={`/report/${item.slug}`}
                 >
                   <h5>{item.name}</h5>
-                </a>
+                </Link>
               </div>
               <div
                 className="font-weight-lighter col-md-12 text-left p-2 mb-4"
@@ -46,25 +47,25 @@ export default function Industry() {
                           className="font-weight-light text-left pl-1"
                           style={{ fontSize: "0.84em" }}
                         >
-                          <a
+                          <Link
                             className="text-decoration-none text-dark"
-                            href={`/report/sect/${e.slug}`}
+                            to={`/report/sect/${e.slug}`}
                           >
                             {e.sectorName}
-                          </a>
+                          </Link>
                         </span>
                       </li>
                     )
                   })}
                 </ul>
               </div>
-              <a
+              <Link
                 className="btn btn-outline-primary mt-2 mb-2 float-left "
-                href={`/report/${item.slug}`}
+                to={`/report/${item.slug}`}
                 role="button"
               >
                 View Reports
-              </a>
+              </Link>
             </div>
           )
         })}

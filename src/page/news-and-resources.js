@@ -15,7 +15,7 @@ export default function() {
   const [page, setPage] = useState(1)
 
   return (
-    <Layout>
+    <>
       <SEO title={"sheer analytics"} />
       <InnerPageBanner headingText={"News and Resources"} linkText={"News"} />
       <div className="container">
@@ -86,6 +86,6 @@ export default function() {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }

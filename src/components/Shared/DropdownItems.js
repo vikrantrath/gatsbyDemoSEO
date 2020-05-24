@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 import {
   Dropdown,
   DropdownToggle,
@@ -44,11 +45,8 @@ export default function DropdownItems({ item }) {
                   )}
                   {e.sectionItems.map(ele => {
                     return (
-                      <DropdownItem
-                        style={{ fontSize: "0.85em" }}
-                        href={ele.link}
-                      >
-                        {ele.name}
+                      <DropdownItem style={{ fontSize: "0.85em" }}>
+                        <Link to={ele.link}>{ele.name} </Link>
                       </DropdownItem>
                     )
                   })}

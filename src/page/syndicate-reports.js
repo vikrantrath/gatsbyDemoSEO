@@ -4,8 +4,7 @@ import Layout from "../components/Base/Layout"
 import SEO from "../components/Base/SEO"
 import InnerPageBanner from "../components/Shared/InnerPageBanner"
 
-import extractPassport1Data from "../services/extractPassport1Data"
-import extractPassport2Data from "../services/extractPassport2Data"
+import extractSyndicateReport from "../services/extractSyndicateReport"
 import extractUpcomingsReport from "../services/extractUpcomingsData"
 
 import constants from "../services/constants"
@@ -19,17 +18,16 @@ import ReportTable from "../components/Shared/ReportTable"
 
 export default function() {
   const data = getAllReportsByType(
-    extractPassport2Data(),
+    extractSyndicateReport(),
     extractUpcomingsReport(),
-    constants().solution_type.Syndicate_Report,
-    extractPassport1Data()
+    constants().solution_type.Syndicate_Report
   )
   return (
-    <Layout>
+    <>
       <SEO title={"sheer analytics"} />
       <InnerPageBanner
-        headingText={"Passport Reports"}
-        linkText={"Passport Reports"}
+        headingText={"Syndicate Reports"}
+        linkText={"Syndicate Reports"}
       />
       <div className="container">
         <div className="row">
@@ -47,6 +45,6 @@ export default function() {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }

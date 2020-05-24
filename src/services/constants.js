@@ -9,5 +9,10 @@ export default function() {
       Latest_Published_Reports: "1",
       Upcoming_Reports: "2",
     },
+    solution_type_name: {
+      1: "Passport Report 1",
+      2: "Syndicate Report",
+      4: "Passport Report 2",
+    },
   }
 }

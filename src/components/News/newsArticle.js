@@ -27,7 +27,7 @@ export default function({ slug }) {
   }
   const data = getArticleData()
   return (
-    <Layout>
+    <>
       <SEO title={"sheer analytics"} />
       <InnerPageBanner
         headingText={"News and Resources"}
@@ -54,6 +54,6 @@ export default function({ slug }) {
       ) : (
         "Not Found"
       )}
-    </Layout>
+    </>
   )
 }

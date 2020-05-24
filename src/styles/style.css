@@ -1,0 +1,139 @@
+/*Sidebar for reports page*/
+.licence_right.full {
+  border-top: 40px solid #e2e2e2;
+}
+.full {
+  width: 100%;
+  float: left;
+}
+.licence_right {
+  padding: 10px;
+  border: 1px solid #cecece;
+  margin: 0 0 20px;
+  font-size: 14px;
+  font-family: arial;
+  color: #484848;
+}
+.licence_right.full > h3 {
+  margin-top: -40px;
+}
+.licence_right h3 {
+  color: #0a84b2;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: arial;
+  text-transform: inherit;
+  line-height: 1.3em;
+  margin: 5px 0 10px;
+}
+.why_c_us_inner {
+  display: block;
+  clear: both;
+  padding-top: 15px;
+  position: relative;
+}
+.why_c_us_inner li,
+.why_c_us_inner p {
+  list-style-type: disc;
+  font-size: 0.9em;
+  line-height: 2em;
+}
+
+.why_c_us_text {
+  color: #6f6f6f;
+  font-size: 14px;
+  float: left;
+  width: 100%;
+}
+h4.why_c_us_h4 {
+  color: #340f49;
+  float: left;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: inherit;
+  margin: 10px 0 5px;
+  float: left;
+  width: 100%;
+}
+.rep_tab {
+  position: relative;
+  text-align: justify;
+  padding: 2em;
+}
+.rsidebar {
+  display: block;
+  float: left;
+  /*margin: 2em 2em 0% 0;*/
+  width: 90%;
+}
+.side {
+  font-size: 1.5em;
+  color: black;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 4px;
+  margin-bottom: 1em;
+}
+.single-bottom {
+  padding-left: 10px;
+}
+.alert ul {
+  font-size: 1.4em;
+}
+.single-bottom a p {
+  padding-bottom: 1px;
+}
+
+section.sky-form {
+  /*border-top:1px solid #eee;*/
+  padding: 1em 0;
+}
+
+.sky-form h4 {
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 10px 0;
+  text-transform: uppercase;
+  color: #026466;
+}
+.product-model-sec {
+  margin: 1em 0 0 0;
+  float: right;
+}
+.glyphicon-minus {
+  top: -1px !important;
+}
+.glyphicon-minus:before {
+  content: "\2212";
+  color: #fff;
+  font-size: 9px;
+  background: rgba(2, 100, 102, 0.71);
+  padding: 1px 6px;
+  margin-right: 5px;
+}
+
+ul.place {
+  margin: 5px 0;
+  background: #f9f9f9;
+  width: 100%;
+  padding: 0px 5px;
+  cursor: pointer;
+}
+ul.place li {
+  display: inline-block;
+  padding: 6px;
+}
+ul.place li {
+  font-size: 0.9em;
+  color: #8c8c8c;
+  text-decoration: none;
+  cursor: pointer;
+}
+ul.place li span {
+  color: #f02b63;
+}
+ul.place li.sort {
+  float: left;
+}
+ul.place li.by {
+  float: right;
+}

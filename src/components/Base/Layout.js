@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header from '../Base/Header';
 import Footer from '../Base/Footer';
+
+import '../../styles/style.css'
 function Layout({ children }) {
     return (
         <body>

@@ -56,29 +56,35 @@ export default function LatestPublication() {
             return (
               <div className="font-weight-lighter text-left p-2 border">
                 <Link
-                  to={`/market-report-research/${e.link}-${e.report_type}${e.report_sub_type}`}
+                  to={`/market-research-reports/${e.link}-${e.report_type}${e.report_sub_type}`}
                 >
                   {e.title}
                 </Link>
               </div>
             )
           })}
-          <button type="button" class="btn btn-outline-primary mt-2 mb-2">
-            View All Latest Reports
-          </button>
+          <Link to={`/market-research-reports/latest-published-reports`}>
+            <button type="button" class="btn btn-outline-primary mt-2 mb-2">
+              View All Latest Reports
+            </button>
+          </Link>
         </div>
         <div class="text-center col-md-4 col-sm-12">
           <h5 class="text-center">Press Release</h5>
           {pressRelease.map(e => {
             return (
               <div className="font-weight-lighter text-left p-2 border">
-                <Link to={`press/${e.link}`}>{e.title}</Link>
+                <Link to={`press/${e.link}`} target="_blank">
+                  {e.title}
+                </Link>
               </div>
             )
           })}
-          <button type="button" class="btn btn-outline-primary mt-2 mb-2">
-            View All Press
-          </button>
+          <Link to={`/press-release`}>
+            <button type="button" class="btn btn-outline-primary mt-2 mb-2">
+              View All Press
+            </button>
+          </Link>
         </div>
       </div>
     </div>

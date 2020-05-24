@@ -17,7 +17,7 @@ export default function() {
   const [pressYear, setPressYear] = useState(2018)
 
   return (
-    <Layout>
+    <>
       <SEO title={"sheer analytics"} />
       <InnerPageBanner
         headingText={"Press Release"}
@@ -58,6 +58,6 @@ export default function() {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }

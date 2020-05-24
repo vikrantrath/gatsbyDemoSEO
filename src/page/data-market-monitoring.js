@@ -1,6 +1,6 @@
 import React from "react"
 
-import Contact from "../components/Contact/Contact"
+import DataMarketMonitoring from "../components/Solutions/DataMarketMonitoring"
 import Layout from "../components/Base/Layout"
 import SEO from "../components/Base/SEO"
 import InnerPageBanner from "../components/Shared/InnerPageBanner"
@@ -9,10 +9,10 @@ import "font-awesome/css/font-awesome.min.css"
 
 export default function() {
   return (
-    <Layout>
+    <>
       <SEO title={"sheer analytics"} />
-      <InnerPageBanner headingText={"Contact Us"} linkText={"Contact"} />
-      <Contact />
-    </Layout>
+      <InnerPageBanner headingText={"Data Market Monitoring"} linkText={"Data Market Monitoring"} />
+      <DataMarketMonitoring />
+    </>
   )
 }

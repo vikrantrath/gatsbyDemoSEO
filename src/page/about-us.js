@@ -11,7 +11,7 @@ import "font-awesome/css/font-awesome.min.css"
 export default function() {
   const data = extractAboutData()
   return (
-    <Layout>
+    <>
       <SEO title={"sheer analytics"} />
       <InnerPageBanner headingText={"About Us"} linkText={"About"}/>
       <div className="container">
@@ -21,6 +21,6 @@ export default function() {
           />
         ))}
       </div>
-    </Layout>
+    </>
   )
 }

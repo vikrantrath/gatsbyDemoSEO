@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 import GoogleTranslate from "../Base/GoogleTranslate"
 import Logo from "../../assets/sai_logo.png"
 import DropdownItem from "../Shared/DropdownItems"
@@ -226,9 +227,9 @@ export default function Header(props) {
               } else {
                 return (
                   <li className="nav-item">
-                    <a className="nav-link" href={item.link}>
+                    <Link className="nav-link" to={item.link}>
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 )
               }

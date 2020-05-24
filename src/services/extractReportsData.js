@@ -35,7 +35,7 @@ export function getReportByType(
   )
   const actualSlug = slug.substring(0, slug.length - 3)
   if (releaseType == constants.report_release_type.Upcoming_Reports) {
-    return 501
+    return upcomings.find(e => e.slug.toLowerCase() == actualSlug.toLowerCase())
   } else {
     if (solutionType == constants.solution_type.Syndicate_Report) {
       return syndicateReport.find(e => e.slug == actualSlug)

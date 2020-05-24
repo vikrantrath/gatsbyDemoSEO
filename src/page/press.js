@@ -9,10 +9,11 @@ import "../styles/bootstrap.min.css"
 import "font-awesome/css/font-awesome.min.css"
 
 export default function(props) {
+  console.log(props)
   return (
-    <Router>
-      <NewAndResources path="/press/" />
-      <PressArticle path="/press/:slug" />
+    <Router basepath="/press">
+      <NewAndResources path="/" />
+      <PressArticle path="/:slug" />
     </Router>
   )
 }

@@ -1,8 +1,10 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 export default function SolutionCard({ item }) {
   const [swapDiv, setSwapDiv] = useState(false)
   return (
-    <a
+    <Link
+      to={item.link}
       className="text-center col-md-2 col-sm-6 rounded bg-white rounded align-items-center d-flex text-decoration-none"
       style={{
         height: "243px",
@@ -10,7 +12,6 @@ export default function SolutionCard({ item }) {
       }}
       onMouseEnter={() => setSwapDiv(true)}
       onMouseLeave={() => setSwapDiv(false)}
-      href={item.link}
     >
       {swapDiv ? (
         <div
@@ -43,6 +44,6 @@ export default function SolutionCard({ item }) {
           <h6 className="font-weight-normal p-2">{item.title}</h6>
         </div>
       )}
-    </a>
+    </Link>
   )
 }
