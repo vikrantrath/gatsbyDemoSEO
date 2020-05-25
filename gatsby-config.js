@@ -13,7 +13,7 @@ module.exports = {
     // image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
     // twitterUsername: "@occlumency",
   },
-  plugins: [
+  plugins: [`gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-mysql`,
       options: {
