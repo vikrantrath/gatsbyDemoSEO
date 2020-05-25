@@ -197,12 +197,12 @@ export default function Header(props) {
 
   return (
     <>
-      <div className="row" style={{ backgroundColor: "#0f0f7a" }}>
-        <div className="col-md-3 text-center text-light align-content-center pt-2">
+      <div className="row" style={{ backgroundColor: "#0f0f7a", fontSize: "12px", height: "2rem" }}>
+        <div className="col-md-3 text-center text-light align-content-center">
           <GoogleTranslate />
         </div>
         <div className="col-md-6 text-center text-light pt-2">
-          <i class="fa fa-phone" aria-hidden="true"></i>+91-33-4600-9199
+          <i class="fa fa-phone" aria-hidden="true"></i>+91-33-4600-9199&nbsp;
           (India),<i class="fa fa-phone" aria-hidden="true"></i> +1-414-240-5010
           (U.S.)
         </div>
@@ -217,7 +217,7 @@ export default function Header(props) {
           </ul>
         </div>
       </div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-between  mb-5">
         <div class="col-md-2">
           <a href="/">
             <img src={Logo} height="60px" className="navbar-brand" />
