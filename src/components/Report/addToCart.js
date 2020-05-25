@@ -1,6 +1,8 @@
 import React from "react"
 
-export default function({ pressItem }) {
+import Button from "../Base/button/Button"
+
+export default function ({ pressItem }) {
   return (
     <>
       <select
@@ -11,11 +13,7 @@ export default function({ pressItem }) {
         <option defaultChecked>Get from db</option>
         <option>2</option>
       </select>
-      <button
-        className={`btn btn-primary text-white mb-2 col-md-5 ml-1 rounded-0`}
-      >
-        Add To Cart
-      </button>
+      <Button text="Add To Cart" />
     </>
   )
 }

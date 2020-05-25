@@ -1,3 +1,8 @@
+body {
+  font-family: ProximaNovaRegular,sans-serif;
+  font-size: 1rem;
+}
+
 /*Sidebar for reports page*/
 .licence_right.full {
   border-top: 40px solid #e2e2e2;
