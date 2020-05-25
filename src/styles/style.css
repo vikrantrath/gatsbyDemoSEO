@@ -1,5 +1,5 @@
 body {
-  font-family: ProximaNovaRegular,sans-serif;
+  font-family: ProximaNovaRegular, sans-serif;
   font-size: 1rem;
 }
 
@@ -145,7 +145,17 @@ ul.place li.by {
 
 .solcat {
   width: 100%;
-  height: 243px!important;
+  height: 243px !important;
   padding: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.blog-box {
+  background: white;
+  border: 1px solid #d8c7c7;
+  padding: 0;
+  padding-bottom: 1em;
+  margin-top: 2em;
+  margin-bottom: 1em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

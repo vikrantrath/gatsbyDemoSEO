@@ -100,6 +100,11 @@ module.exports = {
             idFieldName: "id",
             name: "regionSector",
           },
+          {
+            statement: "select * from blogs where status=1",
+            idFieldName: "id",
+            name: "blogs",
+          },
         ],
       },
     },

@@ -1,0 +1,42 @@
+.blog p {
+  font-size: 20px !important;
+  line-height: 30px;
+}
+
+.blog span {
+  font-size: 20px !important;
+  line-height: 30px;
+}
+
+.st-custom-buttont[data-network] {
+  background-color: #30bbee;
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+}
+.st-custom-button[data-network] {
+  background-color: #0926ae;
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+}
+.st-custom-buttonl[data-network] {
+  background-color: #328dbc;
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+}
+.st-custom-buttone[data-network] {
+  background-color: #f13a22;
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+}

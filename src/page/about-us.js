@@ -1,6 +1,5 @@
 import React from "react"
 
-import Layout from "../components/Base/Layout"
 import SEO from "../components/Base/SEO"
 import extractAboutData from "../services/extractAboutData"
 import InnerPageBanner from '../components/Shared/InnerPageBanner'

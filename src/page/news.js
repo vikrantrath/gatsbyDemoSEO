@@ -10,9 +10,9 @@ import "font-awesome/css/font-awesome.min.css"
 
 export default function(props) {
   return (
-    <Router>
-      <NewAndResources path="/news/" />
-      <NewsArticle path="/news/:slug" />
+    <Router basepath="/news">
+      <NewAndResources path="/" />
+      <NewsArticle path="/:slug" />
     </Router>
   )
 }
