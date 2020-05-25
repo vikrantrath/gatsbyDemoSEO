@@ -14,6 +14,7 @@ module.exports = {
     // twitterUsername: "@occlumency",
   },
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-mysql`,
       options: {
