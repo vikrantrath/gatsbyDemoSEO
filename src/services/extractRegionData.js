@@ -31,7 +31,7 @@ export default function() {
 
   const sectors = data.allMysqlRegionSector.edges.map(sector => {
     return {
-      id: sector.node.id.replace("mysql__Sector__", ""),
+      id: sector.node.id.replace("mysql__RegionSector__", ""),
       reg_cat_id: sector.node.reg_cat_id,
       sector_name: sector.node.sector_name,
       slug: sector.node.slug,
