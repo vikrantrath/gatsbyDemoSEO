@@ -74,7 +74,7 @@ export default function() {
                 ? data.map(e => {
                     return (
                       <NewsColumns
-                        image={newsImage}
+                        image={e.image.replace("/public", "")}
                         title={e.title}
                         slug={e.slug}
                         alt_text={e.alt_text}
