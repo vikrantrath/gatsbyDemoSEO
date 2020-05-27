@@ -13,7 +13,8 @@ module.exports = {
     // image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
     // twitterUsername: "@occlumency",
   },
-  plugins: [`gatsby-plugin-sass`,
+  plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-mysql`,
       options: {
@@ -98,6 +99,11 @@ module.exports = {
             statement: "select * from reg_cat_sectors where status=1",
             idFieldName: "id",
             name: "regionSector",
+          },
+          {
+            statement: "select * from blogs where status=1",
+            idFieldName: "id",
+            name: "blogs",
           },
         ],
       },
