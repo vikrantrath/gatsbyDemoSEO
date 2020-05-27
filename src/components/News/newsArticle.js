@@ -37,12 +37,18 @@ export default function({ slug }) {
         <div className="container">
           <div className="row">
             <div className="col-md-3 article mb-4">
-             <HyperlinkList headingText={"Press & News"} linkList={[{name:"All News",href:"/news-and-resources"},{name:"Press Release",href:"/press-release"}]} />
+              <HyperlinkList
+                headingText={"Press & News"}
+                linkList={[
+                  { name: "All News", href: "/news-and-resources" },
+                  { name: "Press Release", href: "/press-release" },
+                ]}
+              />
             </div>
             <div className="col-md-9 article mb-4">
               <div className="col-md-12 p-0" height="13em">
                 <img
-                  src={newsImage}
+                  src={data.image.replace("/public", "")}
                   width="100%"
                   height="100%"
                 />
