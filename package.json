@@ -21,6 +21,7 @@
     "gatsby-plugin-sass": "^2.3.2",
     "gatsby-source-filesystem": "^2.1.43",
     "gatsby-source-mysql": "^2.2.1",
+    "gsap": "^3.3.0",
     "node-sass": "^4.14.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

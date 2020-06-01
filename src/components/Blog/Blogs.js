@@ -9,7 +9,6 @@ export default function() {
   const years = [2020, 2019, 2018, 2017]
   const [currYear, setCurrYear] = useState(2020)
   const data = extractBlogsData()
-  console.log(data)
   function getBlogsByYear() {
     return data
       .filter(e => new Date(e.created_at).getFullYear() == currYear)

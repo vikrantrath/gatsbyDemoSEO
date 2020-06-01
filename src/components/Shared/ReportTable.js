@@ -22,7 +22,7 @@ export default function({ tableData }) {
     }
   }
 
-  return tableData.length > 0 ? (
+  return tableData && tableData.length > 0 ? (
     <table className="table table-bordered table-hover">
       <thead className="thead-dark">
         <tr>

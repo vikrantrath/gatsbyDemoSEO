@@ -26,7 +26,6 @@ export default function({ slug }) {
     extractUpcomingData(),
     slug
   )
-  console.log(data)
   const pages = {
     4: [
       { pageName: "Report Analysis", variableName: "analysis" },

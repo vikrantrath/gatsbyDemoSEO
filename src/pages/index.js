@@ -17,6 +17,7 @@ import SyndicateReport from "../page/syndicate-reports"
 import Report from "../page/report"
 import News from "../page/news"
 import Blog from "../page/blog"
+import SearchResults from "../page/searchResults"
 
 import "../styles/bootstrap.min.css"
 import "font-awesome/css/font-awesome.min.css"
@@ -25,6 +26,7 @@ export default function index(props) {
   function ErrorDisplay() {
     return <h1>Not Found</h1>
   }
+  console.log(props)
   return (
     <Layout>
       <Router>
@@ -42,6 +44,7 @@ export default function index(props) {
         <PressRelease path="/press-release" />
         <SyndicateReport path="/syndicate-reports" />
         <Report path="/report/*" />
+        <SearchResults path="/search-results/:slug" />
         <ErrorDisplay default />
       </Router>
     </Layout>

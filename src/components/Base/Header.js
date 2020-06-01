@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { Link, navigate } from "gatsby"
+import React, { useState, useEffect } from "react"
+import { navigate, Link } from "gatsby"
 import GoogleTranslate from "../Base/GoogleTranslate"
 import Logo from "../../assets/sai_logo.png"
 import DropdownItem from "../Shared/DropdownItems"
@@ -11,6 +11,7 @@ import {
   extractSyndicateReport,
   extractUpcomingsData,
 } from "../../services"
+
 export default function Header(props) {
   const industryData = extractIndustryData().map(e => {
     return {
@@ -26,6 +27,7 @@ export default function Header(props) {
   })
 
   const [searchResults, setSearchResult] = useState(undefined)
+  const [searchTerm, setSearchTerm] = useState("")
 
   const regionData = extractRegionData().map(e => {
     return {
@@ -107,17 +109,15 @@ export default function Header(props) {
     ...extractSyndicateReport(),
     extractUpcomingsData(),
   ]
-  function searchTerm(e) {
-    const term = e.target.value
-    console.log(term)
+  useEffect(() => {
     const foundTerm = reports.filter(
       ele =>
         ele.title &&
-        term &&
-        ele.title.toUpperCase().includes(term.toUpperCase())
+        searchTerm &&
+        ele.title.toUpperCase().includes(searchTerm.toUpperCase())
     )
-    setSearchResult(foundTerm.splice(0, 5))
-  }
+    setSearchResult(foundTerm)
+  }, [searchTerm])
 
   function gotoReport(report) {
     setSearchResult(undefined)
@@ -132,14 +132,17 @@ export default function Header(props) {
       setSearchResult(undefined)
       document.getElementById("searchReport").value = ""
       navigate(`/submit-query`)
-    }
-    if (searchResults.length == 1) {
-      setSearchResult(undefined)
+    } else if (searchResults.length == 1) {
       document.getElementById("searchReport").value = ""
       const report = searchResults[0]
+      setSearchResult(undefined)
       navigate(
         `/market-research-reports/${report.slug}-${report.report_type}${report.report_sub_type}`
       )
+    } else {
+      document.getElementById("searchReport").value = ""
+      setSearchResult(undefined)
+      navigate(`/search-results/${searchTerm}`)
     }
   }
 
@@ -234,7 +237,8 @@ export default function Header(props) {
                   placeholder="Search"
                   aria-label="Search"
                   aria-describedby="basic-addon1"
-                  onChange={searchTerm}
+                  onChange={e => setSearchTerm(e.target.value)}
+                  value={searchTerm}
                   onKeyDown={e => e.keyCode == 13 && validateAndNavigate()}
                 />
                 <div className="input-group-append">
@@ -256,10 +260,11 @@ export default function Header(props) {
                   }}
                 >
                   {searchResults &&
-                    searchResults.map(e => (
+                    [...searchResults].splice(0, 5).map(e => (
                       <li
-                        className="bg-muted p-2 text-muted border"
+                        className="bg-muted p-2 text-muted border searchResultsUl"
                         onClick={() => gotoReport(e)}
+                        style={{ cursor: "pointer" }}
                       >
                         {e.title.substring(0, 50).concat("...")}
                       </li>
