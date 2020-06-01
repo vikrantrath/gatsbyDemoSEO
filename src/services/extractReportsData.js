@@ -15,8 +15,8 @@ export function getAllReportsByType(
   const data = []
   data.push(...solutionData)
   data.push(...solutionData2)
-  const upcomingSyndicateData = upcomingsData.filter(
-    e => solutionType.includes(e.report_type)
+  const upcomingSyndicateData = upcomingsData.filter(e =>
+    solutionType.includes(e.report_type)
   )
   data.push(...upcomingSyndicateData)
   return data
@@ -38,11 +38,17 @@ export function getReportByType(
     return upcomings.find(e => e.slug.toLowerCase() == actualSlug.toLowerCase())
   } else {
     if (solutionType == constants.solution_type.Syndicate_Report) {
-      return syndicateReport.find(e => e.slug == actualSlug)
+      return syndicateReport.find(
+        e => e.slug.toLowerCase() == actualSlug.toLowerCase()
+      )
     } else if (solutionType == constants.solution_type.Passport_Report_1) {
-      return passport1Data.find(e => e.slug == actualSlug)
+      return passport1Data.find(
+        e => e.slug.toLowerCase() == actualSlug.toLowerCase()
+      )
     } else {
-      return passport2Data.find(e => e.slug == actualSlug)
+      return passport2Data.find(
+        e => e.slug.toLowerCase() == actualSlug.toLowerCase()
+      )
     }
   }
 }

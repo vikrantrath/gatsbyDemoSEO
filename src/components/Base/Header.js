@@ -1,9 +1,16 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import GoogleTranslate from "../Base/GoogleTranslate"
 import Logo from "../../assets/sai_logo.png"
 import DropdownItem from "../Shared/DropdownItems"
-import { extractIndustryData, extractRegionData } from "../../services"
+import {
+  extractIndustryData,
+  extractRegionData,
+  extractPassport1Data,
+  extractPassport2Data,
+  extractSyndicateReport,
+  extractUpcomingsData,
+} from "../../services"
 export default function Header(props) {
   const industryData = extractIndustryData().map(e => {
     return {
@@ -17,6 +24,8 @@ export default function Header(props) {
       }),
     }
   })
+
+  const [searchResults, setSearchResult] = useState(undefined)
 
   const regionData = extractRegionData().map(e => {
     return {
@@ -91,6 +100,48 @@ export default function Header(props) {
       dropdownItems: [],
     },
   ]
+
+  const reports = [
+    ...extractPassport1Data(),
+    ...extractPassport2Data(),
+    ...extractSyndicateReport(),
+    extractUpcomingsData(),
+  ]
+  function searchTerm(e) {
+    const term = e.target.value
+    console.log(term)
+    const foundTerm = reports.filter(
+      ele =>
+        ele.title &&
+        term &&
+        ele.title.toUpperCase().includes(term.toUpperCase())
+    )
+    setSearchResult(foundTerm.splice(0, 5))
+  }
+
+  function gotoReport(report) {
+    setSearchResult(undefined)
+    document.getElementById("searchReport").value = ""
+    navigate(
+      `/market-research-reports/${report.slug}-${report.report_type}${report.report_sub_type}`
+    )
+  }
+
+  function validateAndNavigate() {
+    if (searchResults.length == 0) {
+      setSearchResult(undefined)
+      document.getElementById("searchReport").value = ""
+      navigate(`/submit-query`)
+    }
+    if (searchResults.length == 1) {
+      setSearchResult(undefined)
+      document.getElementById("searchReport").value = ""
+      const report = searchResults[0]
+      navigate(
+        `/market-research-reports/${report.slug}-${report.report_type}${report.report_sub_type}`
+      )
+    }
+  }
 
   return (
     <>
@@ -177,17 +228,43 @@ export default function Header(props) {
             <li className="nav-item ml-2">
               <div className="input-group">
                 <input
+                  id="searchReport"
                   type="text"
                   className="form-control"
                   placeholder="Search"
                   aria-label="Search"
                   aria-describedby="basic-addon1"
+                  onChange={searchTerm}
+                  onKeyDown={e => e.keyCode == 13 && validateAndNavigate()}
                 />
                 <div className="input-group-append">
-                  <span className="input-group-text" id="basic-addon1">
+                  <span
+                    className="input-group-text"
+                    id="basic-addon1"
+                    onClick={validateAndNavigate}
+                  >
                     <i className="fa fa-search" aria-hidden="true"></i>
                   </span>
                 </div>
+                <ul
+                  className="mt-5 list-unstyled"
+                  style={{
+                    position: "absolute",
+                    zIndex: "100",
+                    width: "100%",
+                    backgroundColor: "white",
+                  }}
+                >
+                  {searchResults &&
+                    searchResults.map(e => (
+                      <li
+                        className="bg-muted p-2 text-muted border"
+                        onClick={() => gotoReport(e)}
+                      >
+                        {e.title.substring(0, 50).concat("...")}
+                      </li>
+                    ))}
+                </ul>
               </div>
             </li>
           </ul>
