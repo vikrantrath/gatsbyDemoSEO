@@ -28,6 +28,7 @@ export default function Header(props) {
 
   const [searchResults, setSearchResult] = useState(undefined)
   const [searchTerm, setSearchTerm] = useState("")
+  const [showMobileMenu, setShowMobileMenu] = useState(false)
 
   const regionData = extractRegionData().map(e => {
     return {
@@ -150,18 +151,18 @@ export default function Header(props) {
     <>
       <div
         className="row"
-        style={{ backgroundColor: "#0f0f7a", fontSize: "12px", height: "2rem" }}
+        style={{ backgroundColor: "#0f0f7a", fontSize: "12px" }}
       >
-        <div className="col-md-3 text-center text-light align-content-center">
+        <div className="col-md-3 col-sm-12 text-center text-light align-content-center">
           <GoogleTranslate />
         </div>
-        <div className="col-md-6 text-center text-light pt-2">
+        <div className="col-md-6 col-sm-12 text-center text-light pt-2">
           <i className="fa fa-phone" aria-hidden="true"></i>
           +91-33-4600-9199&nbsp; (India),
           <i className="fa fa-phone" aria-hidden="true"></i> +1-414-240-5010
           (U.S.)
         </div>
-        <div className="col-md-3 text-center text-light pt-2">
+        <div className="col-md-3 col-sm-12 text-center text-light pt-2">
           <ul className="list-inline">
             <li className="list-inline-item">
               <Link to={"/"} className="text-white">
@@ -209,6 +210,7 @@ export default function Header(props) {
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            onClick={() => setShowMobileMenu(!showMobileMenu)}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -275,6 +277,15 @@ export default function Header(props) {
           </ul>
         </div>
       </nav>
+      {showMobileMenu && (
+        <ul className="list-unstyled text-center">
+          {navItems.map(e => (
+            <li className="bg-primary border p-2">
+              <Link to={e.link} className="text-decoration-none text-white">{e.name}</Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </>
   )
 }
