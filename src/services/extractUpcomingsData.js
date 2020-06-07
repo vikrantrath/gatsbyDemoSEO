@@ -31,7 +31,7 @@ export default function() {
   `)
   return data.allMysqlUpcomings.edges.map(e => {
     return {
-      id: e.node.id,
+      id: e.node.id.replace("mysql__Upcomings__", ""),
       report_type: e.node.report_type,
       ind_cat_id: e.node.ind_cat_id,
       ind_sect_id: e.node.ind_sect_id,

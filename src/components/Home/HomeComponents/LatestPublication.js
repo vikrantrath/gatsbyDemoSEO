@@ -1,6 +1,7 @@
 import React from "react"
 import SectionHeader from "../../Shared/SectionHeader"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import Button from "../../Base/button/Button"
 
 export default function LatestPublication() {
   const data = useStaticQuery(graphql`
@@ -63,13 +64,13 @@ export default function LatestPublication() {
               </div>
             )
           })}
-          <Link to={`/market-research-reports/latest-published-reports`}>
-            <button type="button" class="btn btn-outline-primary mt-2 mb-2">
-              View All Latest Reports
-            </button>
-          </Link>
+          <div className="align-self-center col-md-4 col-sm-12 mb-sm-4 mb-xs-4">
+            <Link to={`/market-research-reports/latest-published-reports`}>
+              <Button text={"View All Latest Reports"} />
+            </Link>
+          </div>
         </div>
-        <div class="text-center col-md-4 col-sm-12">
+        <div class="text-center col-md-4 col-sm-12 mt-sm-4 mt-xs-4 mt-md-0">
           <h5 class="text-center">Press Release</h5>
           {pressRelease.map(e => {
             return (
@@ -80,11 +81,11 @@ export default function LatestPublication() {
               </div>
             )
           })}
-          <Link to={`/press-release`}>
-            <button type="button" class="btn btn-outline-primary mt-2 mb-2">
-              View All Press
-            </button>
-          </Link>
+          <div className="align-self-center col-md-8 col-sm-12 mb-sm-4 mb-xs-4 mb-md-0">
+            <Link to={`/press-release`}>
+              <Button text={"View All Press"} />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

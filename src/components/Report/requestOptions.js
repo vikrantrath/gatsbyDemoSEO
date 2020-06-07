@@ -1,18 +1,19 @@
 import React from "react"
+import { Link } from "gatsby"
+import Button from "../Base/button/Button"
 
 export default function({ options }) {
   return (
-    <div className="col-md-12 p-3 list-inline justify-content-between">
+    <>
       {options.map(e => {
         return (
-          <a
-            className={`btn btn-primary text-white font-weight-normal mt-2 mb-2 mr-3 text-capitalize rounded-0 list-inline-item`}
-            style={{width:"22%"}}
-          >
-            {e.name}
-          </a>
+          <div className="col-md-4">
+            <Link to={e.link}>
+              <Button text={e.name} block={12} />
+            </Link>
+          </div>
         )
       })}
-    </div>
+    </>
   )
 }

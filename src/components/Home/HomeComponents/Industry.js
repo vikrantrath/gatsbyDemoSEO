@@ -3,6 +3,7 @@ import SectionHeader from "../../Shared/SectionHeader"
 import extractIndustryData from "../../../services/extractIndustryData"
 import { Link } from "gatsby"
 import "./Industry.css"
+import Button from "../../Base/button/Button"
 
 export default function Industry() {
   const industryCategorySectorList = extractIndustryData()
@@ -59,12 +60,8 @@ export default function Industry() {
                   })}
                 </ul>
               </div>
-              <Link
-                className="btn btn-outline-primary mt-2 mb-2 float-left "
-                to={`/report/${item.slug}`}
-                role="button"
-              >
-                View Reports
+              <Link to={`/report/${item.slug}`}>
+                <Button text={"View Reports"} block={4}/>
               </Link>
             </div>
           )

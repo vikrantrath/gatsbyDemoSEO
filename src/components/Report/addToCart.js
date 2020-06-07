@@ -2,7 +2,7 @@ import React from "react"
 
 import Button from "../Base/button/Button"
 
-export default function ({ pressItem }) {
+export default function({ pressItem }) {
   return (
     <>
       <select
@@ -13,7 +13,7 @@ export default function ({ pressItem }) {
         <option defaultChecked>Get from db</option>
         <option>2</option>
       </select>
-      <Button text="Add To Cart" />
+      <Button text="Add To Cart" block={4} link={"/login"} />
     </>
   )
 }

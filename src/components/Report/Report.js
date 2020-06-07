@@ -16,6 +16,8 @@ import Constants from "../../services/constants"
 import ReportBG from "../../assets/frontnew.png"
 
 import "./Report.css"
+import Button from "../Base/button/Button"
+import { Link } from "gatsby"
 
 export default function({ slug }) {
   const constants = Constants()
@@ -71,16 +73,30 @@ export default function({ slug }) {
                 <h6 className="font-weight-normal">
                   Report Type : {constants.solution_type_name[data.report_type]}
                 </h6>
-                <AddToCart />
+                <div className="p-3 justify-content-between">
+                  <AddToCart />
+                </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row p-3 list-inline justify-content-between">
               <RequestOptions
                 options={[
-                  { name: "Ask for Discount", link: "#" },
-                  { name: "Request Brochure", link: "#" },
-                  { name: "Ask An Analyst", link: "#" },
-                  { name: "Download Sample", link: "#" },
+                  {
+                    name: "Ask for Discount",
+                    link: `/ask-for-discount/${data.report_type}/${data.report_sub_type}/${data.id}/${constants.request_type.discount}`,
+                  },
+                  {
+                    name: "Request Brochure",
+                    link: `/request-brochure/${data.report_type}/${data.report_sub_type}/${data.id}/${constants.request_type.brochure}`,
+                  },
+                  {
+                    name: "Ask An Analyst",
+                    link: `/ask-an-analyst/${data.report_type}/${data.report_sub_type}/${data.id}/${constants.request_type.analyst}`,
+                  },
+                  {
+                    name: "Download Sample",
+                    link: `/request-sample/${data.report_type}/${data.report_sub_type}/${data.id}/${constants.request_type.sample}`,
+                  },
                 ]}
               />
             </div>
@@ -138,17 +154,11 @@ export default function({ slug }) {
                   <p></p>
                 </div>
                 <div className="col-md-12 consultant-section double-grid p-0 mb-0 mt-1">
-                  <a
-                    href="{{route('request.disc',[$report->report_type, $report->report_sub_type ,$report->id, 1])}}"
-                    className="btn btn-primary text-white font-weight-normal mt-2 mb-2 mr-3 text-capitalize rounded-0 list-inline-item"
-                    style={{
-                      textTransform: "inherit",
-                      width: "100%",
-                      fontSize: "0.9em",
-                    }}
+                  <Link
+                    to={`/ask-for-discount/${data.report_type}/${data.report_sub_type}/${data.id}/${constants.request_type.discount}`}
                   >
-                    Request Custom Pricing
-                  </a>
+                    <Button text={"Request Custom Pricing"} block={12} />
+                  </Link>
                 </div>
               </div>
             </div>

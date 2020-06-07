@@ -51,7 +51,7 @@ export default function FeaturedSection() {
                 key={item.src}
                 className="banner-text-bg"
             >
-                <img src={item.src} alt={item.altText} height="400px" width="100%"/>
+                <img src={item.src} alt={item.altText} height="500px" width="100%"/>
             </CarouselItem>
         );
     });

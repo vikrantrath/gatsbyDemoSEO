@@ -1,4 +1,5 @@
 import React from "react"
+import Button from "../../../Base/button/Button"
 
 export default function({ pressItem }) {
   return (
@@ -10,11 +11,7 @@ export default function({ pressItem }) {
         <option defaultChecked>Get from db</option>
         <option>2</option>
       </select>
-      <button
-        className={`btn btn-primary text-white mt-2 mb-2 btn-block rounded-0`}
-      >
-        Add To Cart
-      </button>
+      <Button text="Add To Cart" block={12} link={"/login"}/>
     </div>
   )
 }

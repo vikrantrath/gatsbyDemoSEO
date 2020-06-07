@@ -35,7 +35,7 @@ export default function() {
   `)
   return data.allMysqlPassLprReport.edges.map(e => {
     return {
-      id: e.node.id,
+      id: e.node.id.replace("mysql__PassLprReport__", ""),
       meta_title: e.node.meta_title,
       meta_desc: e.node.meta_desc,
       meta_keywords: e.node.meta_keywords,
@@ -47,7 +47,7 @@ export default function() {
       title: e.node.title,
       report_sub_type: e.node.report_sub_type,
       description: e.node.description,
-      table_contents: e.node.table_contents?e.node.table_contents:null,
+      table_contents: e.node.table_contents ? e.node.table_contents : null,
       slug: e.node.slug,
       one_cntry: e.node.one_cntry,
       add_cntry: e.node.add_cntry,

@@ -46,8 +46,8 @@ export default function Clients() {
                     <div className="row">
                         {clientLogo.map(e => {
                             return (
-                                <div className="col-md-3 col-xs-6 col-lg-3 col-sm-3 border clientLogo">
-                                    <img className="img-fluid" src={e}></img>
+                                <div className="col-md-3 col-xs-6 col-lg-3 col-sm-12 border clientLogo p-xs-2">
+                                    <img className="img-fluid" src={e} style={{maxHeight:"100%"}}></img>
                                 </div>
                             )
                         })}

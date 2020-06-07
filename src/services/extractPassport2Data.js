@@ -39,7 +39,7 @@ export default function() {
   `)
   return data.allMysqlPass2Report.edges.map(e => {
     return {
-      id: e.node.id,
+      id: e.node.id.replace("mysql__Pass2Report__", ""),
       meta_title: e.node.meta_title,
       meta_desc: e.node.meta_desc,
       meta_keywords: e.node.meta_keywords,

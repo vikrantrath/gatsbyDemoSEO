@@ -14,5 +14,11 @@ export default function() {
       2: "Syndicate Report",
       4: "Passport Report 2",
     },
+    request_type: {
+      discount: "1",
+      brochure: "2",
+      analyst: "3",
+      sample: "5",
+    },
   }
 }
