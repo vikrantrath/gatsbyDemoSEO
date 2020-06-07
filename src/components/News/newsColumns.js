@@ -2,7 +2,7 @@ import React from "react"
 import "./newsColumns.css"
 import { Link } from "gatsby"
 
-export default function({ image, slug, alt_text, title }) {
+export default function ({ image, slug, alt_text, title }) {
   return (
     <div className="col-md-3 offset-md-1 news-box">
       <Link className="text-decoration-none" to={`/news/${slug}`}>
@@ -12,9 +12,6 @@ export default function({ image, slug, alt_text, title }) {
         <br />
         <div className="col-md-12">
           <center>
-            <span className="font-weight-bold text-uppercase h5 mb-4">
-              In The News
-            </span>
             <br />
             <div className="mb-2"></div>
             <span className="text-dark font-weight-normal h4">{title}</span>
