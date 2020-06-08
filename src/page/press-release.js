@@ -8,9 +8,9 @@ import "font-awesome/css/font-awesome.min.css"
 import extractIndustryData from "../services/extractIndustryData"
 
 import ItemDiv from "../components/Presses/itemDiv"
-import PressReleaseItems from "../components/Presses/PressReleaseItems"
+import PressReleaseItems from "../components/Presses/pressReleaseItems"
 
-export default function() {
+export default function () {
   const industryData = extractIndustryData()
 
   const [industryCatId, setIndustryCatId] = useState(undefined)
