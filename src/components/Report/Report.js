@@ -73,7 +73,7 @@ export default function({ slug }) {
                 <h6 className="font-weight-normal">
                   Report Type : {constants.solution_type_name[data.report_type]}
                 </h6>
-                <div className="justify-content-between">
+                <div className="d-flex">
                   <AddToCart reportItem={data} />
                 </div>
               </div>
@@ -121,7 +121,7 @@ export default function({ slug }) {
             </ul>
             <div className="border p-4 font-weight-normal report-content mb-2">
               <div dangerouslySetInnerHTML={{ __html: data[currPage] }}></div>
-              <div class="note bg-info text-white p-2 font-weight-lighter">
+              <div class="note bg-info text-white p-2 font-weight-lighter mt-3">
                 Note: This table of contents is a content of a published report.
                 As per client requirement, cross-sectional analysis across all
                 industries or specific geography or ‘country-based’ analysis can
