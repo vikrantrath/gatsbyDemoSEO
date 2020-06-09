@@ -3,11 +3,7 @@ import React from "react"
 import Button from "../Base/button/Button"
 import { getRates } from "../../services/extractReportsData"
 
-<<<<<<< HEAD
 export default function({ reportItem }) {
-=======
-export default function ({ pressItem }) {
->>>>>>> 05efb83c5dc1c647730aecc9479cf736994f9181
   return (
     <>
       <select

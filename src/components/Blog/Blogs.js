@@ -8,7 +8,7 @@ import InnerPageBanner from "../Shared/InnerPageBanner"
 export default function() {
   const year = new Date().getFullYear()
   const years = []
-  for (let i = year; i >= 2018; i--) years.push(i)
+  for (let i = year; i >= 2017; i--) years.push(i)
   const [currYear, setCurrYear] = useState(year)
   const data = extractBlogsData()
   function getBlogsByYear() {
