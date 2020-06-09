@@ -6,8 +6,10 @@ import SEO from "../Base/SEO"
 import InnerPageBanner from "../Shared/InnerPageBanner"
 
 export default function() {
-  const years = [2020, 2019, 2018, 2017]
-  const [currYear, setCurrYear] = useState(2020)
+  const year = new Date().getFullYear()
+  const years = []
+  for (let i = year; i >= 2018; i--) years.push(i)
+  const [currYear, setCurrYear] = useState(year)
   const data = extractBlogsData()
   function getBlogsByYear() {
     return data

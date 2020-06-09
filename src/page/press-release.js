@@ -10,11 +10,15 @@ import extractIndustryData from "../services/extractIndustryData"
 import ItemDiv from "../components/Presses/itemDiv"
 import PressReleaseItems from "../components/Presses/pressReleaseItems"
 
-export default function () {
+export default function() {
   const industryData = extractIndustryData()
 
   const [industryCatId, setIndustryCatId] = useState(undefined)
   const [pressYear, setPressYear] = useState(2018)
+  const year = new Date().getFullYear()
+  const years = []
+  console.log(year)
+  for (let i = year; i >= 2018; i--) years.push(i)
 
   return (
     <>
@@ -44,7 +48,7 @@ export default function () {
             />
           </div>
           <div className="col-md-1 ">
-            {[2019, 2018].map(e => {
+            {years.map(e => {
               return (
                 <div
                   onClick={() => setPressYear(e)}

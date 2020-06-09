@@ -1,8 +1,9 @@
 import React from "react"
 
 import Button from "../Base/button/Button"
+import { getRates } from "../../services/extractReportsData"
 
-export default function({ pressItem }) {
+export default function({ reportItem }) {
   return (
     <>
       <select
@@ -10,8 +11,7 @@ export default function({ pressItem }) {
         id="exampleFormControlSelect1"
         style={{ display: "inline" }}
       >
-        <option defaultChecked>Get from db</option>
-        <option>2</option>
+        {getRates(reportItem)}
       </select>
       <Button text="Add To Cart" block={4} link={"/login"} />
     </>

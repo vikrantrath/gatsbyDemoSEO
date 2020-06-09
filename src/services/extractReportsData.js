@@ -1,9 +1,5 @@
-import extractPassport1Report from "./extractPassport1Data"
-import extractPassport2Report from "./extractPassport2Data"
 import getConstants from "./constants"
-
-// const passport1Data = extractPassport1Report()
-// const passport2Data = extractPassport2Report()
+import React from "react"
 const constants = getConstants()
 
 export function getAllReportsByType(
@@ -15,8 +11,8 @@ export function getAllReportsByType(
   const data = []
   data.push(...solutionData)
   data.push(...solutionData2)
-  const upcomingSyndicateData = upcomingsData.filter(e =>
-    solutionType.includes(e.report_type)
+  const upcomingSyndicateData = upcomingsData.filter(
+    e => e.report_type && solutionType.includes(e.report_type.toString())
   )
   data.push(...upcomingSyndicateData)
   return data
@@ -29,6 +25,7 @@ export function getReportByType(
   upcomings,
   slug
 ) {
+  console.log(slug)
   const [solutionType, releaseType] = slug.substring(
     slug.length - 2,
     slug.length
@@ -51,4 +48,98 @@ export function getReportByType(
       )
     }
   }
+}
+
+export function getRates(reportItem) {
+  if (reportItem.report_sub_type == 1 && reportItem.report_type == 2) {
+    return getSynPrices(reportItem)
+  } else if (reportItem.report_sub_type == 1 && reportItem.report_type == 1) {
+    return getLPR1Prices(reportItem)
+  } else if (reportItem.report_sub_type == 1 && reportItem.report_type == 4) {
+    return getPass2Prices(reportItem)
+  } else {
+    return getOtherPrices(reportItem)
+  }
+}
+
+function getOtherPrices(reportItem) {
+  return [
+    reportItem.direct_insights ? (
+      <option value="5">
+        CEO or Director Insights Report Price: $ {reportItem.direct_insights}
+      </option>
+    ) : (
+      ""
+    ),
+    reportItem.single_user_price ? (
+      <option value="6">
+        Single User Price: $ {reportItem.single_user_price}
+      </option>
+    ) : (
+      ""
+    ),
+    reportItem.multiple_user_price ? (
+      <option value="7">
+        Multiple User Price: $ {reportItem.multiple_user_price}
+      </option>
+    ) : (
+      ""
+    ),
+  ]
+}
+
+function getLPR1Prices(reportItem) {
+  return [
+    reportItem.one_cntry ? (
+      <option value="3">One Country Price: $ {reportItem.one_cntry}</option>
+    ) : (
+      ""
+    ),
+    reportItem.add_cntry ? (
+      <option value="4">
+        Additional Country Price: $ {reportItem.add_cntry}
+      </option>
+    ) : (
+      ""
+    ),
+  ]
+}
+
+function getSynPrices(reportItem) {
+  return [
+    reportItem.single_user_price ? (
+      <option value="1">
+        Single User Price: $ {reportItem.single_user_price}
+      </option>
+    ) : (
+      ""
+    ),
+    reportItem.multiple_user_price ? (
+      <option value="2">
+        Multiple User Price: $ {reportItem.multiple_user_price}
+      </option>
+    ) : (
+      ""
+    ),
+  ]
+}
+
+function getPass2Prices(reportItem) {
+  return [
+    reportItem.single ? (
+      <option value="8">Single User License: $ {reportItem.single}</option>
+    ) : (
+      ""
+    ),
+    reportItem.multi ? (
+      <option value="9">Multi User License: $ {reportItem.multi}</option>
+    ) : (
+      ""
+    ),
+    reportItem.database ? (
+      <option value="10">Database: $ {reportItem.database}</option>
+    ) : (
+      ""
+    ),
+  ]
 }

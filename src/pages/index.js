@@ -26,7 +26,6 @@ export default function index(props) {
   function ErrorDisplay() {
     return <h1>Not Found</h1>
   }
-  console.log(props)
   return (
     <Layout>
       <Router>

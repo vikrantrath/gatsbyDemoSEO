@@ -19,7 +19,7 @@ import "./Report.css"
 import Button from "../Base/button/Button"
 import { Link } from "gatsby"
 
-export default function ({ slug }) {
+export default function({ slug }) {
   const constants = Constants()
   const data = getReportByType(
     extractSyndicateReport(),
@@ -74,7 +74,7 @@ export default function ({ slug }) {
                   Report Type : {constants.solution_type_name[data.report_type]}
                 </h6>
                 <div className="justify-content-between">
-                  <AddToCart />
+                  <AddToCart reportItem={data} />
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function ({ slug }) {
                     <a
                       className={`nav-link ${
                         currPage === e.variableName ? "active" : ""
-                        }`}
+                      }`}
                       onClick={() => setCurrPage(e.variableName)}
                     >
                       {e.pageName}
