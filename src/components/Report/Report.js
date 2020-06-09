@@ -19,7 +19,7 @@ import "./Report.css"
 import Button from "../Base/button/Button"
 import { Link } from "gatsby"
 
-export default function({ slug }) {
+export default function ({ slug }) {
   const constants = Constants()
   const data = getReportByType(
     extractSyndicateReport(),
@@ -73,12 +73,12 @@ export default function({ slug }) {
                 <h6 className="font-weight-normal">
                   Report Type : {constants.solution_type_name[data.report_type]}
                 </h6>
-                <div className="p-3 justify-content-between">
+                <div className="justify-content-between">
                   <AddToCart />
                 </div>
               </div>
             </div>
-            <div className="row p-3 list-inline justify-content-between">
+            <div className="row list-inline justify-content-between">
               <RequestOptions
                 options={[
                   {
@@ -101,7 +101,7 @@ export default function({ slug }) {
               />
             </div>
             <ul
-              className="nav nav-tabs rounded-0 border"
+              className="nav mt-3 nav-tabs rounded-0 border"
               style={{ backgroundColor: "#c7c7c7" }}
             >
               {pageContents.map((e, i) => {
@@ -110,7 +110,7 @@ export default function({ slug }) {
                     <a
                       className={`nav-link ${
                         currPage === e.variableName ? "active" : ""
-                      }`}
+                        }`}
                       onClick={() => setCurrPage(e.variableName)}
                     >
                       {e.pageName}
