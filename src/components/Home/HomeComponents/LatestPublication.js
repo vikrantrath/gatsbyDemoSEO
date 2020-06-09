@@ -57,7 +57,7 @@ export default function LatestPublication() {
             return (
               <div className="font-weight-lighter text-left p-2 border">
                 <Link
-                  to={`/market-research-reports/${e.link}-${e.report_type}${e.report_sub_type}`}
+                  to={`/market-report-research/${e.link}-${e.report_type}${e.report_sub_type}`}
                 >
                   {e.title}
                 </Link>
@@ -65,7 +65,7 @@ export default function LatestPublication() {
             )
           })}
           <div className="align-self-center col-md-4 col-sm-12 mb-sm-4 mb-xs-4">
-            <Link to={`/market-research-reports/latest-published-reports`}>
+            <Link to={`/market-report-research/latest-published-reports`}>
               <Button text={"View All Latest Reports"} />
             </Link>
           </div>

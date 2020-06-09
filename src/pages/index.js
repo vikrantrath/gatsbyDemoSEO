@@ -32,7 +32,7 @@ export default function index(props) {
       <Router>
         <Home path="/" />
         <Press path="/press/:slug" />
-        <MarketReportResearch path="/market-research-reports/:slug" />
+        <MarketReportResearch path="/market-report-research/:slug" />
         <About path="/about-us" />
         <ConsultingSolutions path="/consulting-solutions" />
         <Contact path="/contact-us" />

@@ -124,7 +124,7 @@ export default function Header(props) {
     setSearchResult(undefined)
     document.getElementById("searchReport").value = ""
     navigate(
-      `/market-research-reports/${report.slug}-${report.report_type}${report.report_sub_type}`
+      `/market-report-research/${report.slug}-${report.report_type}${report.report_sub_type}`
     )
   }
 
@@ -138,7 +138,7 @@ export default function Header(props) {
       const report = searchResults[0]
       setSearchResult(undefined)
       navigate(
-        `/market-research-reports/${report.slug}-${report.report_type}${report.report_sub_type}`
+        `/market-report-research/${report.slug}-${report.report_type}${report.report_sub_type}`
       )
     } else {
       document.getElementById("searchReport").value = ""

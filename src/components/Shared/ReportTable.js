@@ -39,7 +39,7 @@ export default function({ tableData }) {
               <td width="50%">
                 <Link
                   className="text-decoration-none"
-                  to={`/market-research-reports/${e.slug}-${e.report_type}${e.report_sub_type}`}
+                  to={`/market-report-research/${e.slug}-${e.report_type}${e.report_sub_type}`}
                 >
                   <div
                     width="50%"

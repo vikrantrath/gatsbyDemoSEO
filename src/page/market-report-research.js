@@ -4,7 +4,7 @@ import Report from "../components/Report/Report"
 
 export default function(props) {
   return (
-    <Router basepath="/market-research-reports">
+    <Router basepath="/market-report-research">
       <Latest path="/latest-published-reports" />
       <Report path="/:slug" />
     </Router>
