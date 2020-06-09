@@ -73,7 +73,7 @@ export default function ({ slug }) {
                 <h6 className="font-weight-normal">
                   Report Type : {constants.solution_type_name[data.report_type]}
                 </h6>
-                <div className="justify-content-between">
+                <div className="d-flex">
                   <AddToCart />
                 </div>
               </div>
