@@ -63,7 +63,6 @@ function SEO({ description, lang, meta, keywords, metaTitle, siteTitle }) {
                             .concat(meta)}
                     >
                         <title>{siteTitle}</title>
-                        <link rel="canonical" href={canonical} />
                     </Helmet>
                 );
             }}
