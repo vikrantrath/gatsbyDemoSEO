@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 function SEO({ description, lang, meta, keywords, metaTitle, siteTitle }) {
-    const canonical = window.location.href;
-
     return (
         <StaticQuery
             query={detailsQuery}
@@ -80,7 +78,7 @@ SEO.propTypes = {
     description: PropTypes.string,
     lang: PropTypes.string,
     meta: PropTypes.array,
-    keywords: PropTypes.arrayOf(PropTypes.string),
+    keywords: PropTypes.string,
     title: PropTypes.string.isRequired
 };
 

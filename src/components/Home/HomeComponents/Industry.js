@@ -13,7 +13,7 @@ export default function Industry() {
       <div className="row">
         {industryCategorySectorList.map(item => {
           return (
-            <div class="text-center col-md-6 col-sm-12">
+            <div className="text-center col-md-6 col-sm-12">
               <div className="col-md-12">
                 <div className="industry-icon">
                   <i className={item.icon} aria-hidden="true"></i>
@@ -37,7 +37,7 @@ export default function Industry() {
                 <ul className="row list-unstyled">
                   {item.industrySectorList.map(e => {
                     return (
-                      <li class="col-md-4 col-sm-12 text-left p-0">
+                      <li className="col-md-4 col-sm-12 text-left p-0">
                         <div className="industry-icon pl-2 ">
                           <i
                             className="fa fa-chevron-right ml-1"
@@ -61,7 +61,7 @@ export default function Industry() {
                 </ul>
               </div>
               <Link to={`/report/${item.slug}`}>
-                <Button text={"View Reports"} block={4}/>
+                <Button text={"View Reports"} block={4} />
               </Link>
             </div>
           )
