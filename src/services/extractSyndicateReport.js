@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export default function() {
+export default function () {
   const data = useStaticQuery(graphql`
     {
       allMysqlSyndicatereport {
@@ -42,7 +42,7 @@ export default function() {
       id: e.node.id.replace("mysql__Syndicatereport__", ""),
       meta_title: e.node.meta_title,
       meta_desc: e.node.meta_desc,
-      meta_keywords: e.node.meta_keywords,
+      meta_keywords: e.node.meta_keywords || '',
       report_type: e.node.report_type,
       ind_cat_id: e.node.ind_cat_id,
       ind_sect_id: e.node.ind_sect_id,

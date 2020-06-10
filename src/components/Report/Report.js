@@ -19,7 +19,7 @@ import "./Report.css"
 import Button from "../Base/button/Button"
 import { Link } from "gatsby"
 
-export default function({ slug }) {
+export default function ({ slug }) {
   const constants = Constants()
   const data = getReportByType(
     extractSyndicateReport(),
@@ -52,7 +52,7 @@ export default function({ slug }) {
 
   return (
     <>
-      <SEO title={"sheer analytics"} />
+      <SEO metaTitle={data.meta_title} description={data.meta_desc} keywords={data.meta_keywords} />
       <div className="container">
         <div className="row">
           <div className="col-md-9">
@@ -110,7 +110,7 @@ export default function({ slug }) {
                     <a
                       className={`nav-link ${
                         currPage === e.variableName ? "active" : ""
-                      }`}
+                        }`}
                       onClick={() => setCurrPage(e.variableName)}
                     >
                       {e.pageName}

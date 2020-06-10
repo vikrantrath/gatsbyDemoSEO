@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-function SEO({ description, lang, meta, keywords, metatitle }) {
+function SEO({ description, lang, meta, keywords, metaTitle }) {
     return (
         <StaticQuery
             query={detailsQuery}
             render={data => {
                 const metaDescription =
                     description || data.site.siteMetadata.description;
-                const title = metatitle || data.site.siteMetadata.title;
+                const title = metaTitle || data.site.siteMetadata.title;
                 return (
                     <Helmet
                         htmlAttributes={{
@@ -44,16 +44,20 @@ function SEO({ description, lang, meta, keywords, metatitle }) {
                             {
                                 name: `twitter:description`,
                                 content: metaDescription
+                            },
+                            {
+                                name: `keywords`,
+                                content: keywords
                             }
                         ]
-                            .concat(
-                                keywords.length > 0
-                                    ? {
-                                        name: `keywords`,
-                                        content: keywords.join(`, `)
-                                    }
-                                    : []
-                            )
+                            // .concat(
+                            //     keywords.length > 0
+                            //         ? {
+                            //             name: `keywords`,
+                            //             content: keywords
+                            //         }
+                            //         : []
+                            // )
                             .concat(meta)}
                     />
                 );
