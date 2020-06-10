@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-function SEO({ description, lang, meta, keywords, metaTitle }) {
+function SEO({ description, lang, meta, keywords, metaTitle, siteTitle }) {
+    const canonical = window.location.href;
+
     return (
         <StaticQuery
             query={detailsQuery}
@@ -59,7 +61,10 @@ function SEO({ description, lang, meta, keywords, metaTitle }) {
                             //         : []
                             // )
                             .concat(meta)}
-                    />
+                    >
+                        <title>{siteTitle}</title>
+                        <link rel="canonical" href={canonical} />
+                    </Helmet>
                 );
             }}
         />

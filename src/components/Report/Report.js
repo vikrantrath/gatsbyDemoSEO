@@ -52,7 +52,7 @@ export default function ({ slug }) {
 
   return (
     <>
-      <SEO metaTitle={data.meta_title} description={data.meta_desc} keywords={data.meta_keywords} />
+      <SEO metaTitle={data.meta_title} description={data.meta_desc} keywords={data.meta_keywords} siteTitle={data.title} />
       <div className="container">
         <div className="row">
           <div className="col-md-9">
