@@ -7,7 +7,7 @@ import { post } from '../../network/apiCalls';
 
 import './form.css';
 
-export default function Form({ slug }) {
+export default function Form({ slug, headingText }) {
   const { register, handleSubmit, errors, reset } = useForm();
 
   const onSubmit = async data => {
@@ -22,7 +22,7 @@ export default function Form({ slug }) {
   return (
     <div class="container">
       <form onSubmit={handleSubmit(onSubmit)} type="POST">
-        <h3 className="mb-5">Please fill the below form to get the discount for {slug.replace('-21', '').split('-').join(' ')}</h3>
+        <h3 className="mb-5">Please fill the below form to get the {headingText} for {slug.replace('-21', '').split('-').join(' ')}</h3>
         <div className="row">
           <div className="col-sm-6 mb-2">
             <input type="text" ref={register} class="form-control mb-2" placeholder="Your Name*" aria-label="Your Name*"

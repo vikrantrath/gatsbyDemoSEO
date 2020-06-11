@@ -10,7 +10,7 @@ export default function ({ slug }) {
   return (
     <>
       <SEO title={"Sheer Analytics and Insights Ask For Discount"} />
-      <Form headingText={"discount"} linkText={"AskForDiscount"} slug={slug} />
+      <Form headingText={"brochure"} linkText={"AskForDiscount"} slug={slug} />
     </>
   )
 }

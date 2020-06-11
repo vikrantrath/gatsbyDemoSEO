@@ -87,15 +87,15 @@ export default function ({ slug }) {
                   },
                   {
                     name: "Request Brochure",
-                    link: `/request-brochure/${data.report_type}/${data.report_sub_type}/${data.id}/${constants.request_type.brochure}`,
+                    link: `/request-brochure/${slug}`,
                   },
                   {
                     name: "Ask An Analyst",
-                    link: `/ask-an-analyst/${data.report_type}/${data.report_sub_type}/${data.id}/${constants.request_type.analyst}`,
+                    link: `/ask-an-analyst/${slug}`,
                   },
                   {
                     name: "Download Sample",
-                    link: `/request-sample/${data.report_type}/${data.report_sub_type}/${data.id}/${constants.request_type.sample}`,
+                    link: `/request-sample/${slug}`,
                   },
                 ]}
               />

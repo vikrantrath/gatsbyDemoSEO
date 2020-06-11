@@ -9,8 +9,8 @@ import "font-awesome/css/font-awesome.min.css"
 export default function ({ slug }) {
   return (
     <>
-      <SEO title={"Sheer Analytics and Insights Ask For Discount"} />
-      <Form headingText={"discount"} linkText={"AskForDiscount"} slug={slug} />
+      <SEO title={"Sheer Analytics and Insights Request Sample"} />
+      <Form headingText={"sample"} linkText={"AskForDiscount"} slug={slug} />
     </>
   )
 }
