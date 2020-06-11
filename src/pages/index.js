@@ -18,6 +18,10 @@ import Report from "../page/report"
 import News from "../page/news"
 import Blog from "../page/blog"
 import SearchResults from "../page/searchResults"
+import AskForDiscount from '../page/ask-for-discount';
+import AskAnAnalyst from '../page/ask-an-analyst';
+import RequestSample from '../page/request-sample';
+import RequestBrowser from '../page/request-brochure';
 
 import "../styles/bootstrap.min.css"
 import "font-awesome/css/font-awesome.min.css"
@@ -44,6 +48,10 @@ export default function index(props) {
         <SyndicateReport path="/syndicate-reports" />
         <Report path="/report/*" />
         <SearchResults path="/search-results/:slug" />
+        <RequestBrowser path="/request-brochure/:slug" />
+        <AskForDiscount path="/ask-for-discount/:slug" />
+        <AskAnAnalyst path="/ask-an-analyst/:slug" />
+        <RequestSample path="/request-sample/:slug" />
         <ErrorDisplay default />
       </Router>
     </Layout>

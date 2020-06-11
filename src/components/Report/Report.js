@@ -19,7 +19,7 @@ import "./Report.css"
 import Button from "../Base/button/Button"
 import { Link } from "gatsby"
 
-export default function({ slug }) {
+export default function ({ slug }) {
   const constants = Constants()
   const data = getReportByType(
     extractSyndicateReport(),
@@ -52,7 +52,7 @@ export default function({ slug }) {
 
   return (
     <>
-      <SEO title={"sheer analytics"} />
+      <SEO metaTitle={data.meta_title} description={data.meta_desc} keywords={data.meta_keywords} siteTitle={data.title} />
       <div className="container">
         <div className="row">
           <div className="col-md-9">
@@ -83,19 +83,19 @@ export default function({ slug }) {
                 options={[
                   {
                     name: "Ask for Discount",
-                    link: `/ask-for-discount/${data.report_type}/${data.report_sub_type}/${data.id}/${constants.request_type.discount}`,
+                    link: `/ask-for-discount/${slug}`,
                   },
                   {
                     name: "Request Brochure",
-                    link: `/request-brochure/${data.report_type}/${data.report_sub_type}/${data.id}/${constants.request_type.brochure}`,
+                    link: `/request-brochure/${slug}`,
                   },
                   {
                     name: "Ask An Analyst",
-                    link: `/ask-an-analyst/${data.report_type}/${data.report_sub_type}/${data.id}/${constants.request_type.analyst}`,
+                    link: `/ask-an-analyst/${slug}`,
                   },
                   {
                     name: "Download Sample",
-                    link: `/request-sample/${data.report_type}/${data.report_sub_type}/${data.id}/${constants.request_type.sample}`,
+                    link: `/request-sample/${slug}`,
                   },
                 ]}
               />
@@ -110,7 +110,7 @@ export default function({ slug }) {
                     <a
                       className={`nav-link ${
                         currPage === e.variableName ? "active" : ""
-                      }`}
+                        }`}
                       onClick={() => setCurrPage(e.variableName)}
                     >
                       {e.pageName}
