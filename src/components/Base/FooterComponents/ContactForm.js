@@ -10,7 +10,7 @@ export default function ContactForm() {
 
     const onSubmit = async data => {
         try {
-            post(JSON.stringify(data), () => { reset(); });
+            post(data, () => { reset(); });
 
         } catch (error) {
             console.log('errors....', error);
