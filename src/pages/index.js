@@ -18,6 +18,7 @@ import Report from "../page/report"
 import News from "../page/news"
 import Blog from "../page/blog"
 import SearchResults from "../page/searchResults"
+import Form from '../page/ask-for-discount';
 
 import "../styles/bootstrap.min.css"
 import "font-awesome/css/font-awesome.min.css"
@@ -44,6 +45,7 @@ export default function index(props) {
         <SyndicateReport path="/syndicate-reports" />
         <Report path="/report/*" />
         <SearchResults path="/search-results/:slug" />
+        <Form path="/ask-for-discount/:slug" />
         <ErrorDisplay default />
       </Router>
     </Layout>

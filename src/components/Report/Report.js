@@ -83,7 +83,7 @@ export default function ({ slug }) {
                 options={[
                   {
                     name: "Ask for Discount",
-                    link: `/ask-for-discount/${data.report_type}/${data.report_sub_type}/${data.id}/${constants.request_type.discount}`,
+                    link: `/ask-for-discount/${slug}`,
                   },
                   {
                     name: "Request Brochure",
