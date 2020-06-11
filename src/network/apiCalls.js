@@ -1,6 +1,6 @@
 
 const axios = require('axios');
-const url = 'https://sheeranalyticsandinsights.com';
+const url = 'https://www.sheeranalyticsandinsights.com';
 
 export function post(data, callback) {
   axios.post(url + '/api/sendEmail', data)
