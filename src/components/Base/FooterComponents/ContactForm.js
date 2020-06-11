@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-import './ContactForm.css';
+import './contactForm.css';
 
 export default function ContactForm() {
     const { register, handleSubmit, errors, reset } = useForm();
