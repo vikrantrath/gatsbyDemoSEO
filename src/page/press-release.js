@@ -17,7 +17,6 @@ export default function() {
   const [pressYear, setPressYear] = useState(2018)
   const year = new Date().getFullYear()
   const years = []
-  console.log(year)
   for (let i = year; i >= 2018; i--) years.push(i)
 
   return (
