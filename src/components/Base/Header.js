@@ -46,21 +46,21 @@ export default function Header(props) {
   const navItems = [
     {
       name: "Industry Expertise",
-      link: "#",
+      link: "/industry",
       isDropDown: true,
       dropdownItems: industryData,
       columns: 3,
     },
     {
       name: "Regions",
-      link: "#",
+      link: "/regions",
       isDropDown: true,
       dropdownItems: regionData,
       columns: 12,
     },
     {
       name: "Solutions",
-      link: "#",
+      link: "/solutions",
       isDropDown: true,
       dropdownItems: [
         {
@@ -281,7 +281,9 @@ export default function Header(props) {
         <ul className="list-unstyled text-center">
           {navItems.map(e => (
             <li className="bg-primary border p-2">
-              <Link to={e.link} className="text-decoration-none text-white">{e.name}</Link>
+              <Link to={e.link} className="text-decoration-none text-white">
+                {e.name}
+              </Link>
             </li>
           ))}
         </ul>

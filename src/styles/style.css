@@ -162,3 +162,21 @@ ul.place li.by {
 .searchResultsUl:hover {
   text-decoration: underline;
 }
+
+.world-bg {
+  background-image: url("../assets/world_map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 4em;
+}
+
+.opacity {
+  background: rgba(0, 0, 20, 0.77);
+  text-align: center;
+  padding: 5em 0 3px 0;
+}
+
+.force-white-text > *{
+  color: white !important;
+}

@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import "./Industry.css"
 import Button from "../../Base/button/Button"
 
-export default function Industry() {
+export default function Industry({ mode }) {
   const industryCategorySectorList = extractIndustryData()
   return (
     <div className="container-fluid p-4">
@@ -21,7 +21,9 @@ export default function Industry() {
               </div>
               <div className="col-md-12">
                 <Link
-                  className="text-decoration-none text-dark"
+                  className={`text-decoration-none text-${
+                    mode ? mode : `dark`
+                  }`}
                   to={`/report/${item.slug}`}
                 >
                   <h5>{item.name}</h5>
@@ -49,7 +51,9 @@ export default function Industry() {
                           style={{ fontSize: "0.84em" }}
                         >
                           <Link
-                            className="text-decoration-none text-dark"
+                            className={`text-decoration-none text-${
+                              mode ? mode : `dark`
+                            }`}
                             to={`/report/sect/${e.slug}`}
                           >
                             {e.sectorName}

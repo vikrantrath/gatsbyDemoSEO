@@ -18,11 +18,13 @@ import Report from "../page/report"
 import News from "../page/news"
 import Blog from "../page/blog"
 import SearchResults from "../page/searchResults"
-import AskForDiscount from '../page/ask-for-discount';
-import AskAnAnalyst from '../page/ask-an-analyst';
-import RequestSample from '../page/request-sample';
-import RequestBrowser from '../page/request-brochure';
-
+import AskForDiscount from "../page/ask-for-discount"
+import AskAnAnalyst from "../page/ask-an-analyst"
+import RequestSample from "../page/request-sample"
+import RequestBrowser from "../page/request-brochure"
+import Industry from "../page/industry"
+import Regions from "../page/regions"
+import Solution from "../page/solutions"
 import "../styles/bootstrap.min.css"
 import "font-awesome/css/font-awesome.min.css"
 
@@ -52,6 +54,9 @@ export default function index(props) {
         <AskForDiscount path="/ask-for-discount/:slug" />
         <AskAnAnalyst path="/ask-an-analyst/:slug" />
         <RequestSample path="/request-sample/:slug" />
+        <Industry path="/industry" />
+        <Regions path="/regions" />
+        <Solution path="/solutions" />
         <ErrorDisplay default />
       </Router>
     </Layout>
