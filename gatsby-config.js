@@ -51,23 +51,23 @@ module.exports = {
         },
         queries: [
           {
-            statement: "SELECT * FROM presses order by id desc",
+            statement: "SELECT * FROM presses where status = 1 order by id desc",
             idFieldName: "id",
             name: "presses",
           },
           {
             statement:
-              "SELECT * FROM syn_lpr_reports where report_sub_type=1 order by id desc",
+              "SELECT * FROM syn_lpr_reports where report_sub_type=1 and status = 1 order by id desc",
             idFieldName: "id",
             name: "latestreports",
           },
           {
-            statement: "select * from ind_cat_sectors where status=1",
+            statement: "select * from ind_cat_sectors where status = 1 order by id desc",
             idFieldName: "id",
             name: "industrycategorysector",
           },
           {
-            statement: "select * from industry_cats where status=1",
+            statement: "select * from industry_cats where status=1 order by id desc",
             idFieldName: "id",
             name: "industrycategory",
           },
@@ -87,7 +87,7 @@ module.exports = {
             name: "news",
           },
           {
-            statement: "select * from presses where status=1 order by id desc",
+            statement: "select * from presses where status = 1 order by id desc",
             idFieldName: "id",
             name: "presses",
           },
