@@ -155,7 +155,7 @@ export default function ({ slug }) {
                 </div>
                 <div className="col-md-12 consultant-section double-grid p-0 mb-0 mt-1">
                   <Link
-                    to={`/ask-for-discount/${data.report_type}/${data.report_sub_type}/${data.id}/${constants.request_type.discount}`}
+                    to={`/ask-for-discount/${data.slug}`}
                   >
                     <Button text={"Request Custom Pricing"} block={12} />
                   </Link>
