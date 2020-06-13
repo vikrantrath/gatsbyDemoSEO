@@ -14,7 +14,7 @@ import {
 
 import { getReportByType } from "../../../services/extractReportsData"
 
-export default function({ pressItem }) {
+export default function ({ pressItem }) {
   const reportItem = getReportByType(
     extractSyndicateReport(),
     extractPassport1Data(),
@@ -37,15 +37,15 @@ export default function({ pressItem }) {
           options={[
             {
               name: "Request Brochure",
-              link: `/request-brochure/${reportItem.report_type}/${reportItem.report_sub_type}/${reportItem.id}/${CONSTANTS.request_type.brochure}`,
+              link: `/request-brochure/${reportItem.slug}`,
             },
             {
               name: "Ask An Analyst",
-              link: `/ask-an-analyst/${reportItem.report_type}/${reportItem.report_sub_type}/${reportItem.id}/${CONSTANTS.request_type.analyst}`,
+              link: `/ask-an-analyst/${reportItem.slug}`,
             },
             {
               name: "Download Sample",
-              link: `/request-sample/${reportItem.report_type}/${reportItem.report_sub_type}/${reportItem.id}/${CONSTANTS.request_type.sample}`,
+              link: `/request-sample/${reportItem.slug}`,
             },
           ]}
           blocks={"12"}
