@@ -13,11 +13,10 @@ import {
 
 import ReportTable from "../components/Shared/ReportTable"
 
-import "../styles/bootstrap.min.css"
 import "font-awesome/css/font-awesome.min.css"
 import HyperlinkList from "../components/Shared/HyperlinkList"
 
-export default function({ slug }) {
+export default function ({ slug }) {
   const industryData = extractIndustryData().map(e => {
     return {
       name: e.name,

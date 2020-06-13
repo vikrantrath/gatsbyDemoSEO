@@ -11,12 +11,10 @@ import constants from "../services/constants"
 
 import { getAllReportsByType } from "../services/extractReportsData"
 
-import "../styles/bootstrap.min.css"
-import "font-awesome/css/font-awesome.min.css"
 import HyperlinkList from "../components/Shared/HyperlinkList"
 import ReportTable from "../components/Shared/ReportTable"
 
-export default function() {
+export default function () {
   const data = getAllReportsByType(
     extractSyndicateReport(),
     extractUpcomingsReport(),

@@ -8,14 +8,13 @@ import InnerPageBanner from "../Shared/InnerPageBanner"
 
 import Article from "../Shared/Article"
 
-import "../../styles/bootstrap.min.css"
 import "font-awesome/css/font-awesome.min.css"
 import "./newsColumns.css"
 
 import newsImage from "../../assets/newsImages/img33.jpg"
 import HyperlinkList from "../Shared/HyperlinkList"
 
-export default function({ slug }) {
+export default function ({ slug }) {
   const item = slug
   const allNewsData = extractNewsData()
 
@@ -58,8 +57,8 @@ export default function({ slug }) {
           </div>
         </div>
       ) : (
-        "Not Found"
-      )}
+          "Not Found"
+        )}
     </>
   )
 }

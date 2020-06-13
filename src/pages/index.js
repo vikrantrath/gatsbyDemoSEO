@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Router, Match } from "@reach/router"
+import { Router } from "@reach/router"
 
 import Layout from "../components/Base/Layout"
 import Home from "../page/home"
@@ -26,8 +26,6 @@ import SubmitQuery from "../page/submit-query"
 import Industry from "../page/industry"
 import Regions from "../page/regions"
 import Solution from "../page/solutions"
-import "../styles/bootstrap.min.css"
-import "font-awesome/css/font-awesome.min.css"
 
 export default function index(props) {
   function ErrorDisplay() {

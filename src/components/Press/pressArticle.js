@@ -9,11 +9,10 @@ import InnerPageBanner from "../Shared/InnerPageBanner"
 import Article from "../Shared/Article"
 import RightRail from "./PressArticleComponents/rightRail"
 
-import "../../styles/bootstrap.min.css"
 import "font-awesome/css/font-awesome.min.css"
 import "./pressArticle.css"
 
-export default function({ slug }) {
+export default function ({ slug }) {
   const item = slug
   const allPressData = extractPressesData()
 
@@ -43,8 +42,8 @@ export default function({ slug }) {
           </div>
         </div>
       ) : (
-        "Not Found"
-      )}
+          "Not Found"
+        )}
     </>
   )
 }

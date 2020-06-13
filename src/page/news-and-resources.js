@@ -1,16 +1,11 @@
 import React, { useState } from "react"
 
-import Layout from "../components/Base/Layout"
 import SEO from "../components/Base/SEO"
 import extractNewsData from "../services/extractNewsData"
 import InnerPageBanner from "../components/Shared/InnerPageBanner"
 import NewsColumns from "../components/News/newsColumns"
-import newsImage from "../assets/newsImages/img33.jpg"
 
-import "../styles/bootstrap.min.css"
-import "font-awesome/css/font-awesome.min.css"
-
-export default function() {
+export default function () {
   const data = extractNewsData()
   const [page, setPage] = useState(1)
 
@@ -72,15 +67,15 @@ export default function() {
             <div className="row">
               {page === 1
                 ? data.map(e => {
-                    return (
-                      <NewsColumns
-                        image={e.image.replace("/public", "")}
-                        title={e.title}
-                        slug={e.slug}
-                        alt_text={e.alt_text}
-                      />
-                    )
-                  })
+                  return (
+                    <NewsColumns
+                      image={e.image.replace("/public", "")}
+                      title={e.title}
+                      slug={e.slug}
+                      alt_text={e.alt_text}
+                    />
+                  )
+                })
                 : "Coming Soon......."}
             </div>
           </div>
