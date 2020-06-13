@@ -189,11 +189,11 @@ export default function Header(props) {
                 Query
               </Link>
             </li>
-            <li className="list-inline-item border-left pl-1">
+            {/* <li className="list-inline-item border-left pl-1">
               <Link to={"/login"} className="text-white">
                 Login
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

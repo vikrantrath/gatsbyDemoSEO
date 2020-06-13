@@ -1,8 +1,5 @@
 import React from "react"
 
-import "../styles/bootstrap.min.css"
-import "font-awesome/css/font-awesome.min.css"
-
 import {
   extractIndustryData,
   extractRegionData,
@@ -16,7 +13,7 @@ import InnerPageBanner from "../components/Shared/InnerPageBanner"
 import SEO from "../components/Base/SEO"
 import HyperlinkList from "../components/Shared/HyperlinkList"
 
-export default function(props) {
+export default function (props) {
   const uri = props["*"]
   const slug = [...uri.split("/")].pop()
   const allData = [
