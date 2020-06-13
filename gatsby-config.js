@@ -16,6 +16,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-120128546-1",
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
