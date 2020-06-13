@@ -22,6 +22,7 @@ import AskForDiscount from "../page/ask-for-discount"
 import AskAnAnalyst from "../page/ask-an-analyst"
 import RequestSample from "../page/request-sample"
 import RequestBrowser from "../page/request-brochure"
+import SubmitQuery from "../page/submit-query"
 import Industry from "../page/industry"
 import Regions from "../page/regions"
 import Solution from "../page/solutions"
@@ -57,6 +58,7 @@ export default function index(props) {
         <Industry path="/industry" />
         <Regions path="/regions" />
         <Solution path="/solutions" />
+        <SubmitQuery path="/submit-query" />
         <ErrorDisplay default />
       </Router>
     </Layout>
