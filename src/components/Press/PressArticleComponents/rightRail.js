@@ -32,20 +32,20 @@ export default function ({ pressItem }) {
         {pressItem.quote && (
           <PressArticleQuote quote={pressItem.quote} name={pressItem.name} />
         )}
-        <AddToCart reportItem={reportItem} />
+        {/* <AddToCart reportItem={reportItem} /> */}
         <RequestOptions
           options={[
             {
               name: "Request Brochure",
-              link: `/request-brochure/${reportItem.slug}`,
+              link: `/request-brochure/${pressItem.slug}`,
             },
             {
               name: "Ask An Analyst",
-              link: `/ask-an-analyst/${reportItem.slug}`,
+              link: `/ask-an-analyst/${pressItem.slug}`,
             },
             {
               name: "Download Sample",
-              link: `/request-sample/${reportItem.slug}`,
+              link: `/request-sample/${pressItem.slug}`,
             },
           ]}
           blocks={"12"}
