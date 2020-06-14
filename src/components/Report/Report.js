@@ -18,8 +18,9 @@ import ReportBG from "../../assets/frontnew.png"
 import "./Report.css"
 import Button from "../Base/button/Button"
 import { Link } from "gatsby"
+import IconPack from "../Shared/IconPack"
 
-export default function ({ slug }) {
+export default function({ slug }) {
   const constants = Constants()
   const data = getReportByType(
     extractSyndicateReport(),
@@ -52,7 +53,12 @@ export default function ({ slug }) {
 
   return (
     <>
-      <SEO metaTitle={data.meta_title} description={data.meta_desc} keywords={data.meta_keywords} siteTitle={data.title} />
+      <SEO
+        metaTitle={data.meta_title}
+        description={data.meta_desc}
+        keywords={data.meta_keywords}
+        siteTitle={data.title}
+      />
       <div className="container">
         <div className="row">
           <div className="col-md-9">
@@ -110,7 +116,7 @@ export default function ({ slug }) {
                     <a
                       className={`nav-link ${
                         currPage === e.variableName ? "active" : ""
-                        }`}
+                      }`}
                       onClick={() => setCurrPage(e.variableName)}
                     >
                       {e.pageName}
@@ -137,6 +143,9 @@ export default function ({ slug }) {
               type="text/javascript"
               src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59bfbc66ac184d32"
             ></script>
+            <div className="row pl-4">
+              <IconPack />
+            </div>
             <div className="col-md-12">
               <div className="licence_right full">
                 <h3>Buy Chapters or Sections</h3>
