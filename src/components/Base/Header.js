@@ -197,8 +197,8 @@ export default function Header(props) {
           </ul>
         </div>
       </div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-between  mb-5">
-        <div className="col-md-2">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light pb-4 pr-0">
+        <div className="col-md-3">
           <a href="/">
             <img src={Logo} height="60px" className="navbar-brand" />
           </a>
@@ -215,7 +215,7 @@ export default function Header(props) {
             <span className="navbar-toggler-icon"></span>
           </button>
         </div>
-        <div className="collapse navbar-collapse col-md-8 pt-4" id="navbarNav">
+        <div className="collapse navbar-collapse col-md-9 pt-4" id="navbarNav">
           <ul className="navbar-nav d-flex justify-content-between">
             {navItems.map(item => {
               if (item.isDropDown) {
@@ -230,7 +230,7 @@ export default function Header(props) {
                 )
               }
             })}
-            <li className="nav-item ml-2">
+            <li className="nav-item ml-4">
               <div className="input-group">
                 <input
                   id="searchReport"

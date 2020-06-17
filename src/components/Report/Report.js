@@ -1,6 +1,4 @@
 import React, { useState } from "react"
-
-import Layout from "../Base/Layout"
 import SEO from "../Base/SEO"
 
 import extractPassport1Data from "../../services/extractPassport1Data"
@@ -59,7 +57,7 @@ export default function ({ slug }) {
         keywords={data.meta_keywords}
         siteTitle={data.title}
       />
-      <div className="container">
+      <div className="container mt-4">
         <div className="row">
           <div className="col-md-9">
             <div className="row">
