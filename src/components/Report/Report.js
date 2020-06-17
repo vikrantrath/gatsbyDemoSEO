@@ -20,7 +20,7 @@ import Button from "../Base/button/Button"
 import { Link } from "gatsby"
 import IconPack from "../Shared/IconPack"
 
-export default function({ slug }) {
+export default function ({ slug }) {
   const constants = Constants()
   const data = getReportByType(
     extractSyndicateReport(),
@@ -116,7 +116,7 @@ export default function({ slug }) {
                     <a
                       className={`nav-link ${
                         currPage === e.variableName ? "active" : ""
-                      }`}
+                        }`}
                       onClick={() => setCurrPage(e.variableName)}
                     >
                       {e.pageName}
@@ -247,13 +247,13 @@ export default function({ slug }) {
                         <a href="#" style={{ float: "left" }}>
                           <img
                             src="/images/logo/sslgodaddy1_new.png"
-                            alt="grand view research PCI DSS complaint"
+                            alt="sheer analytics and insights PCI DSS complaint"
                             width="94"
                           />
                         </a>
                         <img
                           src="/images/logo/paypal-verified.jpg"
-                          alt="grand view research paypal verified"
+                          alt="sheer analytics and insights paypal verified"
                           width="87"
                           height=""
                           style={{ float: "left", marginLeft: "10px" }}
