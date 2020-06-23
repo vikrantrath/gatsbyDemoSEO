@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <section id="Home">
       <FeaturedSection />
-      <PaypalButton currency={"USD"} total={0.1} />
+      {/* <PaypalButton currency={"USD"} total={0.1} /> */}
       <Solutions />
       <Industry />
       <LatestPublication />

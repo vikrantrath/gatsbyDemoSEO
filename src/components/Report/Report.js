@@ -65,7 +65,7 @@ export default function ({ slug }) {
                 <img src={ReportBG} />
               </div>
               <div className="col-md-10">
-                <h5 className="font-weight-bold">{data.title}</h5>
+                <h1 className="font-weight-bold">{data.title}</h1>
                 <div className="text-muted h6">
                   <small>Published Date : {data.month} |</small>
                   <small> Report Id : {data.report_id} |</small>

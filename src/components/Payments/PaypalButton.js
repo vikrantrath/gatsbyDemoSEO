@@ -6,7 +6,7 @@ let PayPalButton = null
 
 const CLIENT = {
   sandbox:
-    "xxxxxx" ,//to be replaced by client id
+    "xxxxxx",//to be replaced by client id
   production: "xxxXXX",
 }
 
