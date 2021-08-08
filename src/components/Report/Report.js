@@ -31,12 +31,12 @@ export default function ({ slug }) {
     4: [
       { pageName: "Report Analysis", variableName: "analysis" },
       { pageName: "Table of Contents", variableName: "table_contents" },
-      { pageName: "Report Description", variableName: "description" },
+      // { pageName: "Report Description", variableName: "description" },
     ],
     2: [
       { pageName: "Report Analysis", variableName: "analysis" },
       { pageName: "Table of Contents", variableName: "table_contents" },
-      { pageName: "Report Description", variableName: "description" },
+      // { pageName: "Report Description", variableName: "description" },
     ],
     1: [{ pageName: "Report Description", variableName: "description" }],
     upcoming: [{ pageName: "Market Insights", variableName: "market" }],
@@ -112,8 +112,7 @@ export default function ({ slug }) {
                 return (
                   <li className="nav-item">
                     <a
-                      className={`nav-link ${
-                        currPage === e.variableName ? "active" : ""
+                      className={`nav-link ${currPage === e.variableName ? "active" : ""
                         }`}
                       onClick={() => setCurrPage(e.variableName)}
                     >
